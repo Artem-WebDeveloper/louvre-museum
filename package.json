@@ -1,0 +1,39 @@
+{
+  "name": "museum",
+  "version": "1.0.0",
+  "description": "museum site",
+  "homepage": "https://github.com/rolling-scopes-school/artem-webdeveloper-JSFEPRESCHOOL2025Q2#readme",
+  "bugs": {
+    "url": "https://github.com/rolling-scopes-school/artem-webdeveloper-JSFEPRESCHOOL2025Q2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rolling-scopes-school/artem-webdeveloper-JSFEPRESCHOOL2025Q2.git"
+  },
+  "license": "ISC",
+  "author": "artem-webdeveloper",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "dependencies": {
+    "braces": "^3.0.3",
+    "chokidar": "^4.0.3",
+    "detect-libc": "^1.0.3",
+    "fill-range": "^7.1.1",
+    "immutable": "^5.1.3",
+    "is-extglob": "^2.1.1",
+    "is-glob": "^4.0.3",
+    "is-number": "^7.0.0",
+    "micromatch": "^4.0.8",
+    "node-addon-api": "^7.1.1",
+    "picomatch": "^2.3.1",
+    "readdirp": "^4.1.2",
+    "source-map-js": "^1.2.1",
+    "to-regex-range": "^5.0.1"
+  },
+  "devDependencies": {
+    "sass": "^1.89.2"
+  }
+}

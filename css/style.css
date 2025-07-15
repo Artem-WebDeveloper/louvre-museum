@@ -1,0 +1,126 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 1440px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  /* font-size: 16px; */
+  line-height: 175%;
+}
+
+.section-title {
+  font-family: "Forum", serif;
+  font-size: 80px;
+  font-weight: 400;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  line-height: 112%;
+}
+
+.header {
+  color: #fff;
+  background-color: #030303;
+}
+.header .header-container {
+  width: 1440px;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .header-container .logo {
+  background-image: url(/assets/svg/logo.svg);
+  width: 199px;
+  height: 33px;
+  transition: all 0.3s ease;
+}
+.header .header-container .logo:hover {
+  filter: brightness(0.6);
+}
+.header .header-container .nav {
+  max-width: 775px;
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  letter-spacing: 2px;
+}
+.header .header-container .nav__list {
+  list-style: none;
+  display: flex;
+  gap: 55px;
+}
+.header .header-container .nav__link {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.header .header-container .nav__link:hover {
+  color: #9d8665;
+}
+
+.section {
+  padding: 75px 0;
+}
+.section--dark {
+  background-color: #030303;
+}
+.section--video {
+  padding: 90px 0 75px 0;
+}
+
+.section-welcome .welcome-wrapper {
+  background-image: linear-gradient(to right, rgb(0, 0, 0) 5%, rgb(0, 0, 0) 5%, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0.99) 31%, transparent 49%), url(../../assets/img/welcome-slider/1.jpg);
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0px) top;
+  height: 810px;
+}
+
+.welcome-box {
+  width: 598px;
+  height: 388px;
+  padding-top: 152px;
+  color: #fff;
+  letter-spacing: 2px;
+}
+.welcome-box__paragraph {
+  font-size: 28px;
+  margin-top: 26px;
+  margin-bottom: 77px;
+}
+.welcome-box__btn {
+  font-size: 22px;
+  font-weight: 300;
+  color: #fff;
+  text-decoration: none;
+  letter-spacing: 2px;
+  background-color: #710707;
+  border-radius: 10px;
+  padding: 24px 66px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.welcome-box__btn:hover {
+  background-color: #9d8665;
+}
+
+/*# sourceMappingURL=style.css.map */

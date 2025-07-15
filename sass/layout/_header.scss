@@ -1,0 +1,49 @@
+@use '../base/variables' as var;
+
+.header {
+  color: var.$color-white;
+  background-color: var.$color-bg-dark;
+
+  .header-container {
+    width: 1440px;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo {
+      background-image: url(/assets/svg/logo.svg);
+      width: 199px;
+      height: 33px;
+      @include var.transition;
+
+      &:hover {
+        filter: brightness(0.6);
+      }
+    }
+
+    .nav {
+      max-width: 775px;
+      font-size: var.$font-size-sm;
+      font-family: var.$font-primary;
+      font-weight: 100;
+      letter-spacing: 2px;
+
+      &__list {
+        list-style: none;
+        display: flex;
+        gap: 55px;
+      }
+
+      &__link {
+        text-decoration: none;
+        color: var.$color-white;
+        @include var.transition;
+
+        &:hover {
+          color: var.$color-font-gold;
+        }
+      }
+    }
+  }
+}

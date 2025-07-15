@@ -1,0 +1,32 @@
+@use '../base/variables' as var;
+
+.welcome-box {
+  width: 598px;
+  height: 388px;
+  padding-top: 152px;
+  color: var.$color-white;
+  letter-spacing: 2px;
+
+  &__paragraph {
+    font-size: var.$font-size-md;
+    margin-top: 26px;
+    margin-bottom: 77px;
+  }
+
+  &__btn {
+    font-size: var.$font-size-sm;
+    font-weight: 300;
+    color: var.$color-white;
+    text-decoration: none;
+    letter-spacing: 2px;
+    background-color: var.$color-dark-red;
+    border-radius: 10px;
+    padding: 24px 66px;
+    display: inline-block;
+    @include var.transition;
+
+    &:hover {
+      background-color: var.$color-font-gold;
+    }
+  }
+}

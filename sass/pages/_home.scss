@@ -1,0 +1,30 @@
+@use '../base/variables' as var;
+
+.section {
+  padding: 75px 0;
+
+  &--dark {
+    background-color: var.$color-bg-dark;
+  }
+
+  &--video {
+    padding: 90px 0 75px 0;
+  }
+}
+
+.section-welcome {
+  .welcome-wrapper {
+    background-image: linear-gradient(
+        to right,
+        rgb(0, 0, 0, 1) 5%,
+        rgb(0, 0, 0, 1) 5%,
+        rgb(0, 0, 0, 1) 10%,
+        rgba(0, 0, 0, 0.99) 31%,
+        transparent 49%
+      ),
+      url(../../assets/img/welcome-slider/1.jpg);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 0px) top;
+    height: 810px;
+  }
+}

@@ -18,6 +18,7 @@ body {
   width: 1440px;
   max-width: 1440px;
   margin: 0 auto;
+  position: relative;
 }
 
 body {
@@ -31,10 +32,24 @@ body {
   font-family: "Forum", serif;
   font-size: 80px;
   font-weight: 400;
-  color: #fff;
   text-transform: uppercase;
   letter-spacing: 5px;
   line-height: 112%;
+}
+.section-title--gold {
+  color: #9d8665;
+}
+.section-title--underline {
+  position: relative;
+}
+.section-title--underline::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #710707;
 }
 
 .header {
@@ -89,12 +104,23 @@ body {
 }
 
 .section-welcome .welcome-wrapper {
-  background-image: linear-gradient(to right, rgb(0, 0, 0) 5%, rgb(0, 0, 0) 5%, rgb(0, 0, 0) 10%, rgba(0, 0, 0, 0.99) 31%, transparent 49%), url(../../assets/img/welcome-slider/1.jpg);
+  background-image: linear-gradient(to right, #030303 5%, #030303 5%, #030303 10%, rgba(0, 0, 0, 0.99) 31%, transparent 49%), url(../../assets/img/welcome-slider/1.jpg);
   background-repeat: no-repeat;
   background-position: calc(100% - 0px) top;
   height: 810px;
 }
 
+/* 
+background-image: linear-gradient(
+    to right,
+    rgb(0, 0, 0, 1) 5%,
+    rgb(0, 0, 0, 1) 5%,
+    rgb(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0.99) 31%,
+    transparent 49%
+  ),
+  url(../../assets/img/welcome-slider/1.jpg);
+ */
 .welcome-box {
   width: 598px;
   height: 388px;
@@ -121,6 +147,63 @@ body {
 }
 .welcome-box__btn:hover {
   background-color: #9d8665;
+}
+
+.welcome-pagination {
+  width: 600px;
+  height: 120px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: #030303;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 75px;
+  font-size: 22px;
+  color: #fff;
+}
+.welcome-pagination__nums {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: start;
+  gap: 10px;
+}
+.welcome-pagination__carousel {
+  display: flex;
+  justify-content: space-around;
+  gap: 25px;
+}
+.welcome-pagination__slide {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+}
+.welcome-pagination__slide--active {
+  background-color: #d2b183;
+}
+.welcome-pagination__arrows {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80px;
+  height: 8px;
+}
+.welcome-pagination__arrows .slider-arrow {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+.welcome-pagination__arrows .slider-arrow:hover {
+  color: #d2b183;
 }
 
 /*# sourceMappingURL=style.css.map */

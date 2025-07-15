@@ -11,8 +11,25 @@ body {
   font-family: var.$font-secondary;
   font-size: var.$font-size-title-section;
   font-weight: 400;
-  color: var.$color-white;
   text-transform: uppercase;
   letter-spacing: 5px;
   line-height: 112%;
+
+  &--gold {
+    color: var.$color-font-gold;
+  }
+
+  &--underline {
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: var.$color-dark-red;
+    }
+  }
 }

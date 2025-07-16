@@ -2,6 +2,7 @@ $color-bg-dark: #030303;
 $color-dark-red: #710707;
 $color-font-gold: #9d8665;
 $color-white: #fff;
+$color-black: #000;
 
 $font-primary: 'Roboto', sans-serif;
 $font-secondary: 'Forum', serif;
@@ -14,4 +15,9 @@ $font-size-xs: 18px;
 
 @mixin transition {
   transition: all 0.3s ease;
+}
+
+/* UTILITIES */
+.u-margin-bottom-lg {
+  margin-bottom: 103px;
 }

@@ -1,0 +1,56 @@
+@use '../base/variables' as var;
+
+.visiting-cards {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 60px;
+  row-gap: 72px;
+
+  .visiting-card {
+    display: block;
+    text-decoration: none;
+    color: var.$color-black;
+
+    &__img {
+      width: 440px;
+      height: 285px;
+      margin-bottom: 19px;
+    }
+
+    &__title {
+      font-family: var.$font-secondary;
+      font-size: var.$font-size-lg;
+      font-weight: 400;
+      letter-spacing: 5px;
+      text-transform: uppercase;
+      margin-bottom: 25px;
+
+      &--underline {
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -15px;
+          left: 0;
+          right: 0;
+          height: 2px;
+          width: 68.1%;
+          background-color: var.$color-dark-red;
+        }
+      }
+    }
+
+    &__paragraph {
+      font-weight: 100;
+      font-size: var.$font-size-sm;
+      margin-bottom: 5px;
+
+      &--small {
+        font-weight: 100;
+        font-size: var.$font-size-xs;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

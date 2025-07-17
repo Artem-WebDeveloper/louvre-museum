@@ -33,3 +33,14 @@ body {
     }
   }
 }
+
+.paragraph {
+  font-family: var.$font-primary;
+  font-weight: 300;
+  font-size: var.$font-size-sm;
+  line-height: 175%;
+  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

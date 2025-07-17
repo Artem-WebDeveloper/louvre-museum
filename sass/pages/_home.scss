@@ -28,3 +28,20 @@
     height: 810px;
   }
 }
+
+.section-explore {
+  .explore-container {
+    width: 1440px;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    gap: 60px;
+    color: var.$color-white;
+
+    &__img {
+      display: block;
+      margin-top: 15px;
+    }
+  }
+}

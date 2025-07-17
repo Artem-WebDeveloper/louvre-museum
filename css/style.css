@@ -57,6 +57,17 @@ body {
   background-color: #710707;
 }
 
+.paragraph {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 175%;
+  margin-bottom: 25px;
+}
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
 .header {
   color: #fff;
   background-color: #030303;
@@ -113,6 +124,20 @@ body {
   background-repeat: no-repeat;
   background-position: calc(100% - 0px) top;
   height: 810px;
+}
+
+.section-explore .explore-container {
+  width: 1440px;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  gap: 60px;
+  color: #fff;
+}
+.section-explore .explore-container__img {
+  display: block;
+  margin-top: 15px;
 }
 
 .welcome-box {
@@ -205,6 +230,7 @@ body {
   flex-wrap: wrap;
   column-gap: 60px;
   row-gap: 72px;
+  margin-bottom: -3px;
 }
 .visiting-cards .visiting-card {
   display: block;

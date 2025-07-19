@@ -6,10 +6,6 @@
   &--dark {
     background-color: var.$color-bg-dark;
   }
-
-  &--video {
-    padding: 90px 0 75px 0;
-  }
 }
 
 .section-welcome {
@@ -43,5 +39,24 @@
       display: block;
       margin-top: 15px;
     }
+  }
+}
+
+.section-video {
+  .video-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 75px;
+
+    &__paragraph {
+      width: 720px;
+    }
+  }
+
+  .video-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 }

@@ -1,0 +1,22 @@
+@use '../base/variables' as var;
+
+.video-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  &__circle {
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    background-color: #999;
+    @include var.transition;
+    &--active {
+      background-color: #333;
+    }
+
+    &:hover {
+      filter: brightness(0.7);
+      cursor: pointer;
+    }
+  }
+}

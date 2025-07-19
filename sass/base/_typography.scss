@@ -13,7 +13,7 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 5px;
-  line-height: 112%;
+  line-height: 112.5%;
 
   &--gold {
     color: var.$color-font-gold;
@@ -43,4 +43,8 @@ body {
   &:last-child {
     margin-bottom: 0;
   }
+}
+
+.text-color-gold {
+  color: var.$color-font-gold;
 }

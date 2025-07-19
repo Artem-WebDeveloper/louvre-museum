@@ -1,0 +1,25 @@
+@use '../base/variables' as var;
+
+.contacts-content {
+  display: flex;
+  gap: 200px;
+
+  .contacts-box {
+    width: 282px;
+    .contacts__list {
+      margin-top: 50px;
+      list-style: none;
+      font-weight: 300;
+      font-size: var.$font-size-sm;
+      display: flex;
+      flex-direction: column;
+      gap: 23px;
+    }
+  }
+
+  .contacts-map {
+    background-image: url(../../assets/img/map.png);
+    width: 960px;
+    height: 620px;
+  }
+}

@@ -60,3 +60,15 @@
     gap: 40px;
   }
 }
+
+.section-gallery {
+  padding-top: 75px;
+  color: var.$color-white;
+}
+
+.section-tickets {
+  .tickets-content {
+    display: flex;
+    justify-content: space-between;
+  }
+}

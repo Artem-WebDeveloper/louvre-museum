@@ -26,6 +26,18 @@ body {
   margin-bottom: 103px;
 }
 
+.u-margin-bottom-md {
+  margin-bottom: 75px;
+}
+
+.u-text-align-end {
+  text-align: end;
+}
+
+.u-line-height-md {
+  line-height: 115%;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -55,6 +67,15 @@ body {
   right: 0;
   height: 3px;
   background-color: #710707;
+}
+
+.title-tertiary {
+  font-family: "Roboto", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+}
+.title-tertiary--font500 {
+  font-weight: 500 !important;
 }
 
 .paragraph {
@@ -154,6 +175,16 @@ body {
   display: flex;
   flex-direction: column;
   gap: 40px;
+}
+
+.section-gallery {
+  padding-top: 75px;
+  color: #fff;
+}
+
+.section-tickets .tickets-content {
+  display: flex;
+  justify-content: space-between;
 }
 
 .welcome-box {
@@ -440,6 +471,191 @@ body {
 .video-pagination__circle:hover {
   filter: brightness(0.7);
   cursor: pointer;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 36px;
+  height: 1960px;
+  overflow: hidden;
+  position: relative;
+}
+.gallery::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background: linear-gradient(to bottom, rgba(3, 3, 3, 0) 0%, rgba(3, 3, 3, 0.09) 5%, #030303 95%);
+  pointer-events: none;
+}
+.gallery-img {
+  width: 100%;
+}
+.gallery .column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.gallery .column-left, .gallery .column-right {
+  margin-top: 50px;
+}
+
+.tickets-img {
+  max-width: 720px;
+  display: block;
+}
+
+/* TYPE */
+.tickets-type {
+  margin-top: 2px;
+  margin-right: 203px;
+}
+.tickets-type .select-type {
+  margin-top: 50px;
+}
+.tickets-type .select-type .select {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 22px;
+  margin-bottom: 24px;
+  cursor: pointer;
+  user-select: none;
+}
+.tickets-type .select-type .select input {
+  display: none;
+}
+.tickets-type .select-type .select .checkmark {
+  margin-right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  border: 2px solid #000;
+  background: #eee;
+  flex-shrink: 0;
+}
+.tickets-type .select-type .select .checkmark::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #000;
+  display: none;
+}
+.tickets-type .select-type .select input:checked + .checkmark::after {
+  display: block;
+}
+.tickets-type .select-type .select:hover .checkmark {
+  background-color: #ccc;
+}
+.tickets-type .select-type .select:last-child {
+  margin-bottom: 0;
+}
+
+/* BUY */
+.tickets-buy {
+  margin-top: 2px;
+  width: 150px;
+}
+.tickets-buy__box {
+  margin-top: 27px;
+}
+.tickets-buy__text {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+.tickets-buy__number {
+  border: 3px solid #000;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.tickets-buy__number:last-of-type {
+  margin-bottom: 0;
+}
+.tickets-buy__btn {
+  border: none;
+  background-color: transparent;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.tickets-buy__btn:hover {
+  color: #9d8665;
+}
+.tickets-buy__input {
+  all: unset;
+  margin-left: 12px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+}
+.tickets-buy__total {
+  letter-spacing: 1.6px;
+  margin: 50px 0 60px 0;
+}
+.tickets-buy .btn-buy {
+  transform: translateX(-25px);
+  background-color: #000;
+  color: #fff;
+  font-size: 22px;
+  font-weight: 300;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 175px;
+  height: 50px;
+  letter-spacing: 2px;
+}
+
+.parallax {
+  width: 100%;
+  height: 400px;
+  background-image: url(../../assets/img/parallax.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.contacts-content {
+  display: flex;
+  gap: 200px;
+}
+.contacts-content .contacts-box {
+  width: 282px;
+}
+.contacts-content .contacts-box .contacts__list {
+  margin-top: 50px;
+  list-style: none;
+  font-weight: 300;
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+}
+.contacts-content .contacts-map {
+  background-image: url(../../assets/img/map.png);
+  width: 960px;
+  height: 620px;
 }
 
 /*# sourceMappingURL=style.css.map */

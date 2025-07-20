@@ -32,7 +32,11 @@
     width: 16px;
     height: 16px;
     background-color: var.$color-white;
+    @include var.transition;
 
+    &:hover {
+      background-color: #d2b183;
+    }
     &--active {
       background-color: #d2b183;
     }

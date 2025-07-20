@@ -10,40 +10,40 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
 
-    .logo {
-      background-image: url(/assets/svg/logo.svg);
-      width: 199px;
-      height: 33px;
-      @include var.transition;
+.nav {
+  max-width: 775px;
+  font-size: var.$font-size-sm;
+  font-family: var.$font-primary;
+  font-weight: 100;
+  letter-spacing: 2px;
 
-      &:hover {
-        filter: brightness(0.6);
-      }
+  &__list {
+    list-style: none;
+    display: flex;
+    gap: 55px;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var.$color-white;
+    @include var.transition;
+
+    &:hover {
+      color: var.$color-font-gold;
     }
+  }
+}
 
-    .nav {
-      max-width: 775px;
-      font-size: var.$font-size-sm;
-      font-family: var.$font-primary;
-      font-weight: 100;
-      letter-spacing: 2px;
+.logo {
+  background-image: url(/assets/svg/logo.svg);
+  width: 199px;
+  height: 33px;
+  @include var.transition;
 
-      &__list {
-        list-style: none;
-        display: flex;
-        gap: 55px;
-      }
-
-      &__link {
-        text-decoration: none;
-        color: var.$color-white;
-        @include var.transition;
-
-        &:hover {
-          color: var.$color-font-gold;
-        }
-      }
-    }
+  &:hover {
+    filter: brightness(0.6);
   }
 }

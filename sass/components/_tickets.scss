@@ -138,5 +138,9 @@
     width: 175px;
     height: 50px;
     letter-spacing: 2px;
+    @include var.transition;
+    &:hover {
+      background-color: var.$color-font-gold;
+    }
   }
 }

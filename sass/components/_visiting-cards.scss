@@ -38,6 +38,7 @@
           height: 2px;
           width: 68.1%;
           background-color: var.$color-dark-red;
+          transition: width 0.5s ease;
         }
       }
     }
@@ -52,6 +53,10 @@
         font-size: var.$font-size-xs;
         margin-bottom: 0;
       }
+    }
+
+    &:hover .visiting-card__title--underline::after {
+      width: 100%;
     }
   }
 }

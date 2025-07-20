@@ -1,0 +1,108 @@
+@use '../base/variables' as var;
+
+.footer {
+  width: 100%;
+  background-color: var.$color-bg-dark;
+  color: var.$color-white;
+  font-size: var.$font-size-sm;
+  font-weight: 200;
+  letter-spacing: 2px;
+
+  &__links {
+    margin-left: 403px;
+    margin-bottom: 8px;
+    display: flex;
+    gap: 25px;
+    align-self: flex-end;
+    list-style: none;
+
+    .footer__link {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      border: 1px solid #666;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include var.transition;
+
+      &:hover {
+        border-color: var.$color-font-gold;
+        transform: translateY(-3px);
+      }
+
+      &:hover .link-icon {
+        color: var.$color-font-gold;
+      }
+    }
+
+    .link-icon {
+      width: 24px;
+      height: 24px;
+      color: var.$color-white;
+      @include var.transition;
+    }
+  }
+
+  &-top {
+    height: 269px;
+    border-bottom: 3px solid #666;
+
+    &__content {
+      display: flex;
+      padding-top: 86px;
+    }
+  }
+
+  &-bottom {
+    display: flex;
+    align-items: center;
+    height: 124px;
+
+    &__info {
+      display: flex;
+      justify-content: space-between;
+
+      .footer-bottom__link {
+        padding-left: 72px;
+        font-size: var.$font-size-sm;
+        font-family: var.$font-primary;
+        text-decoration: none;
+        color: var.$color-white;
+        @include var.transition;
+        &:hover {
+          color: var.$color-font-gold;
+        }
+      }
+    }
+  }
+}
+
+/* NAVIGATION */
+
+.footer-nav {
+  margin-left: 140px;
+  max-width: 363px;
+  font-size: var.$font-size-sm;
+  font-family: var.$font-primary;
+  font-weight: 100;
+  letter-spacing: 2px;
+
+  &__list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 25px 172px;
+    justify-content: center;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: var.$color-white;
+    @include var.transition;
+
+    &:hover {
+      color: var.$color-font-gold;
+    }
+  }
+}

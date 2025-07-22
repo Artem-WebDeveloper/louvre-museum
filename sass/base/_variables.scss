@@ -17,6 +17,22 @@ $font-size-xs: 18px;
   transition: all 0.3s ease;
 }
 
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 420px) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+}
+
 /* UTILITIES */
 .u-margin-bottom-lg {
   margin-bottom: 103px;

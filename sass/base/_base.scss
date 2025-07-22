@@ -1,3 +1,5 @@
+@use '../base/variables' as var;
+
 *,
 *::before,
 *::after {
@@ -19,6 +21,21 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
+
+  @include var.respond(sm) {
+    width: 100%;
+    max-width: 380px;
+  }
+
+  @include var.respond(md) {
+    width: 100%;
+    max-width: 728px;
+  }
+
+  @include var.respond(lg) {
+    width: 100%;
+    max-width: 984px;
+  }
 }
 
 .visually-hidden {

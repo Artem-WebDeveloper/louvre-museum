@@ -15,6 +15,21 @@ body {
   letter-spacing: 5px;
   line-height: 112.5%;
 
+  @include var.respond(sm) {
+    font-size: 28px;
+    line-height: 142.857%;
+  }
+
+  @include var.respond(md) {
+    font-size: 40px;
+    line-height: 150%;
+  }
+
+  @include var.respond(lg) {
+    font-size: 50px;
+    line-height: 180%;
+  }
+
   &--gold {
     color: var.$color-font-gold;
   }

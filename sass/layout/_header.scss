@@ -35,6 +35,18 @@
       color: var.$color-font-gold;
     }
   }
+
+  @include var.respond(lg) {
+    opacity: 0;
+  }
+}
+
+.menu-nav {
+  display: none;
+
+  @include var.respond(lg) {
+    display: block;
+  }
 }
 
 .logo {

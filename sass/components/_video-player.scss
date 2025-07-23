@@ -10,6 +10,18 @@
   height: 650px;
   object-fit: cover;
   object-position: right 37%;
+
+  @include var.respond(sm) {
+    height: 172px;
+  }
+
+  @include var.respond(md) {
+    height: 329px;
+  }
+
+  @include var.respond(lg) {
+    height: 444px;
+  }
 }
 
 .player-btn {
@@ -26,11 +38,56 @@
     width: 220px;
     height: 220px;
     border-radius: 50%;
+
+    @include var.respond(sm) {
+      width: 50px;
+      height: 50px;
+    }
+
+    @include var.respond(md) {
+      width: 80px;
+      height: 80px;
+    }
+
+    @include var.respond(lg) {
+      width: 152px;
+      height: 152px;
+    }
   }
 
   &--small {
     width: 23px;
     height: 31px;
+  }
+
+  &__volume-icon {
+    width: 38px;
+    height: 31px;
+
+    @include var.respond(sm) {
+      width: 18px;
+      height: 14px;
+    }
+
+    @include var.respond(lg) {
+      width: 26px;
+      height: 20px;
+    }
+  }
+
+  &__fullscreen-icon {
+    width: 35px;
+    height: 35px;
+
+    @include var.respond(sm) {
+      width: 18px;
+      height: 18px;
+    }
+
+    @include var.respond(lg) {
+      width: 26px;
+      height: 26px;
+    }
   }
 
   &__img {
@@ -55,6 +112,20 @@
   justify-content: space-around;
   align-items: center;
 
+  @include var.respond(sm) {
+    height: 50px;
+  }
+
+  @include var.respond(md) {
+    height: 53px;
+  }
+
+  @include var.respond(lg) {
+    height: 60px;
+    justify-content: space-evenly;
+    padding: 0 10px;
+  }
+
   .progress-bar {
     cursor: pointer;
     background: linear-gradient(
@@ -70,6 +141,14 @@
     transition: background 450ms ease-in;
     -webkit-appearance: none;
 
+    @include var.respond(sm) {
+      height: 4px;
+    }
+
+    @include var.respond(lg) {
+      height: 5px;
+    }
+
     &::-webkit-slider-thumb {
       width: 15px;
       height: 15px;
@@ -77,14 +156,48 @@
       -webkit-appearance: none;
 
       background: var.$color-white;
+
+      @include var.respond(sm) {
+        width: 10px;
+        height: 10px;
+      }
+
+      @include var.respond(lg) {
+        width: 13px;
+        height: 13px;
+      }
     }
 
     &--duration {
       width: 929px;
+
+      @include var.respond(sm) {
+        width: 200px;
+      }
+
+      @include var.respond(md) {
+        width: 486px;
+      }
+
+      @include var.respond(lg) {
+        width: 564px;
+      }
     }
 
     &--volume {
       width: 155px;
+
+      @include var.respond(sm) {
+        display: none;
+      }
+
+      @include var.respond(md) {
+        display: none;
+      }
+
+      @include var.respond(lg) {
+        width: 143px;
+      }
     }
   }
 }

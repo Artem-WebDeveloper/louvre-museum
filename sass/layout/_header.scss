@@ -10,6 +10,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include var.respond(sm) {
+      width: 420px;
+      height: 90px;
+    }
+
+    @include var.respond(md) {
+      width: 768px;
+      height: 110px;
+    }
+
+    @include var.respond(lg) {
+      width: 1024px;
+      height: 130px;
+    }
   }
 }
 
@@ -38,6 +53,7 @@
 
   @include var.respond(lg) {
     opacity: 0;
+    visibility: hidden;
   }
 }
 

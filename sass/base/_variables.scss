@@ -36,6 +36,14 @@ $font-size-xs: 18px;
 /* UTILITIES */
 .u-margin-bottom-lg {
   margin-bottom: 103px;
+
+  @include respond(md) {
+    margin-bottom: 63px;
+  }
+
+  @include respond(lg) {
+    margin-bottom: 83px;
+  }
 }
 
 .u-margin-bottom-md {

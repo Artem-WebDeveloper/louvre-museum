@@ -7,10 +7,35 @@
   color: var.$color-white;
   letter-spacing: 2px;
 
+  @include var.respond(sm) {
+    height: 365px;
+  }
+
+  @include var.respond(md) {
+    height: 646px;
+  }
+
+  @include var.respond(lg) {
+    padding-top: 50px;
+    width: 445px;
+    height: 343px;
+  }
+
   &__paragraph {
     font-size: var.$font-size-md;
     margin-top: 26px;
     margin-bottom: 77px;
+
+    @include var.respond(sm) {
+    }
+
+    @include var.respond(md) {
+    }
+
+    @include var.respond(lg) {
+      font-size: 24px;
+      margin-bottom: 48px;
+    }
   }
 
   &__btn {
@@ -27,6 +52,18 @@
 
     &:hover {
       background-color: var.$color-font-gold;
+    }
+
+    @include var.respond(sm) {
+    }
+
+    @include var.respond(md) {
+    }
+
+    @include var.respond(lg) {
+      font-size: 20px;
+      padding: 20px 45px;
+      line-height: 100%;
     }
   }
 }

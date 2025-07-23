@@ -45,6 +45,16 @@ body {
       right: 0;
       height: 3px;
       background-color: var.$color-dark-red;
+
+      @include var.respond(sm) {
+      }
+
+      @include var.respond(md) {
+      }
+
+      @include var.respond(lg) {
+        bottom: -16px;
+      }
     }
   }
 }

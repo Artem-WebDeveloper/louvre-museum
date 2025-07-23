@@ -6,6 +6,16 @@
   &--dark {
     background-color: var.$color-bg-dark;
   }
+
+  @include var.respond(sm) {
+  }
+
+  @include var.respond(md) {
+  }
+
+  @include var.respond(lg) {
+    padding: 60px 0;
+  }
 }
 
 .section-welcome {
@@ -22,6 +32,19 @@
     background-repeat: no-repeat;
     background-position: calc(100% - 0px) top;
     height: 810px;
+    width: 100%;
+
+    @include var.respond(sm) {
+      height: 365px;
+    }
+
+    @include var.respond(md) {
+      height: 646px;
+    }
+
+    @include var.respond(lg) {
+      height: 585px;
+    }
   }
 }
 
@@ -35,9 +58,71 @@
     gap: 60px;
     color: var.$color-white;
 
+    @include var.respond(sm) {
+      width: 100%;
+      max-width: 380px;
+    }
+
+    @include var.respond(md) {
+      width: 100%;
+      max-width: 728px;
+    }
+
+    @include var.respond(lg) {
+      width: 100%;
+      max-width: 984px;
+      flex-direction: column;
+    }
+
+    &__paragraph {
+      font-family: var.$font-primary;
+      font-weight: 300;
+      font-size: var.$font-size-sm;
+      line-height: 175%;
+      margin-bottom: 25px;
+      &:last-child {
+        margin-bottom: 0;
+
+        @include var.respond(lg) {
+          display: none;
+        }
+      }
+
+      @include var.respond(sm) {
+      }
+
+      @include var.respond(md) {
+        display: none;
+      }
+
+      @include var.respond(lg) {
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 192.5%;
+        margin-top: -9px;
+        margin-bottom: 9px;
+      }
+    }
+
     &__img {
       display: block;
       margin-top: 15px;
+
+      @include var.respond(sm) {
+      }
+
+      @include var.respond(md) {
+        margin-top: 0;
+        width: 728px;
+        height: 705px;
+      }
+
+      @include var.respond(lg) {
+        width: 720px;
+        height: 700px;
+        margin-top: -14px;
+        align-self: center;
+      }
     }
   }
 }
@@ -49,8 +134,16 @@
     justify-content: space-between;
     margin-bottom: 75px;
 
+    @include var.respond(lg) {
+      margin-bottom: 30px;
+    }
+
     &__paragraph {
       width: 720px;
+
+      @include var.respond(lg) {
+        display: none;
+      }
     }
   }
 

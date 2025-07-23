@@ -14,6 +14,18 @@
   font-size: var.$font-size-sm;
   color: var.$color-white;
 
+  @include var.respond(sm) {
+  }
+
+  @include var.respond(md) {
+  }
+
+  @include var.respond(lg) {
+    width: 700px;
+    font-size: 20px;
+    padding: 0 75px 0 225px;
+  }
+
   &__nums {
     text-transform: uppercase;
     display: flex;
@@ -39,6 +51,19 @@
     }
     &--active {
       background-color: #d2b183;
+    }
+
+    @include var.respond(sm) {
+      width: 7px;
+      height: 7px;
+    }
+
+    @include var.respond(md) {
+    }
+
+    @include var.respond(lg) {
+      width: 12px;
+      height: 12px;
     }
   }
 

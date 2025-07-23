@@ -135,7 +135,7 @@
     margin-bottom: 75px;
 
     @include var.respond(lg) {
-      margin-bottom: 30px;
+      margin-bottom: 31px;
     }
 
     &__paragraph {
@@ -157,6 +157,16 @@
 .section-gallery {
   padding-top: 75px;
   color: var.$color-white;
+
+  @include var.respond(sm) {
+  }
+
+  @include var.respond(md) {
+  }
+
+  @include var.respond(lg) {
+    padding-top: 60px;
+  }
 }
 
 .section-tickets {

@@ -3,6 +3,17 @@
 .tickets-img {
   max-width: 720px;
   display: block;
+
+  @include var.respond(sm) {
+  }
+
+  @include var.respond(md) {
+  }
+
+  @include var.respond(lg) {
+    width: 700px;
+    height: 440px;
+  }
 }
 
 /* TYPE */
@@ -10,6 +21,10 @@
 .tickets-type {
   margin-top: 2px;
   margin-right: 203px;
+
+  @include var.respond(lg) {
+    display: none;
+  }
 
   .select-type {
     margin-top: 50px;

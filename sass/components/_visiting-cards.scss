@@ -6,6 +6,7 @@
   column-gap: 60px;
   row-gap: 72px;
   margin-bottom: -3px;
+  justify-content: space-evenly;
 
   @include var.respond(sm) {
   }
@@ -14,7 +15,6 @@
   }
 
   @include var.respond(lg) {
-    justify-content: space-evenly;
     column-gap: 0;
     row-gap: 55px;
     margin-top: -9px;

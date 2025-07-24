@@ -1,7 +1,7 @@
 @use '../base/variables' as var;
 
 .tickets-img {
-  max-width: 720px;
+  width: 50%;
   display: block;
 
   @include var.respond(sm) {
@@ -11,8 +11,9 @@
   }
 
   @include var.respond(lg) {
-    width: 700px;
+    width: 71%;
     height: 440px;
+    object-fit: cover;
   }
 }
 
@@ -20,7 +21,7 @@
 
 .tickets-type {
   margin-top: 2px;
-  margin-right: 203px;
+  margin-right: 14%;
 
   @include var.respond(lg) {
     display: none;
@@ -83,6 +84,17 @@
 .tickets-buy {
   margin-top: 2px;
   width: 150px;
+
+  @include var.respond(sm) {
+  }
+
+  @include var.respond(md) {
+  }
+
+  @include var.respond(lg) {
+    width: 18%;
+  }
+
   &__box {
     margin-top: 27px;
   }
@@ -103,6 +115,14 @@
     justify-content: center;
     gap: 6px;
     margin-bottom: 10px;
+
+    @include var.respond(lg) {
+      gap: 29px;
+    }
+
+    @include var.respond(lg) {
+      margin-bottom: 25px;
+    }
 
     &:last-of-type {
       margin-bottom: 0;
@@ -125,7 +145,7 @@
 
   &__input {
     all: unset;
-    margin-left: 12px;
+    margin-left: 9%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -133,11 +153,19 @@
     text-align: center;
     font-size: var.$font-size-sm;
     font-weight: 300;
+
+    @include var.respond(lg) {
+      margin-left: 0;
+    }
   }
 
   &__total {
     letter-spacing: 1.6px;
     margin: 50px 0 60px 0;
+
+    @include var.respond(lg) {
+      margin: 20px 0 74px 0;
+    }
   }
 
   .btn-buy {
@@ -156,6 +184,17 @@
     @include var.transition;
     &:hover {
       background-color: var.$color-font-gold;
+    }
+
+    @include var.respond(lg) {
+      transform: none;
+      width: 100%;
+    }
+  }
+
+  .u-text-align-end {
+    @include var.respond(lg) {
+      text-align: start;
     }
   }
 }

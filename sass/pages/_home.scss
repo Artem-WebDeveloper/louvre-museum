@@ -32,7 +32,7 @@
     background-repeat: no-repeat;
     background-position: calc(100% - 0px) top;
     height: 810px;
-    width: 100%;
+    // width: 100%;
 
     @include var.respond(sm) {
       height: 365px;
@@ -50,7 +50,6 @@
 
 .section-explore {
   .explore-container {
-    width: 1440px;
     max-width: 1440px;
     margin: 0 auto;
     position: relative;
@@ -107,6 +106,8 @@
     &__img {
       display: block;
       margin-top: 15px;
+      width: 50%;
+      object-fit: cover;
 
       @include var.respond(sm) {
       }
@@ -173,5 +174,18 @@
   .tickets-content {
     display: flex;
     justify-content: space-between;
+    gap: 5px;
+
+    @include var.respond(sm) {
+    }
+
+    @include var.respond(md) {
+    }
+
+    @include var.respond(lg) {
+      justify-content: start;
+      gap: 8.3%;
+      margin-top: -9px;
+    }
   }
 }

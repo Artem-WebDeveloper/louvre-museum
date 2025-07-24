@@ -9,12 +9,17 @@
   letter-spacing: 2px;
 
   &__links {
-    margin-left: 403px;
+    align-self: flex-end;
     margin-bottom: 8px;
     display: flex;
     gap: 25px;
-    align-self: flex-end;
+    justify-self: flex-end;
     list-style: none;
+
+    @include var.respond(lg) {
+      margin-left: 9%;
+      margin-bottom: 0px;
+    }
 
     .footer__link {
       width: 48px;
@@ -48,9 +53,27 @@
     height: 269px;
     border-bottom: 3px solid #666;
 
+    @include var.respond(sm) {
+    }
+
+    @include var.respond(md) {
+    }
+
+    @include var.respond(lg) {
+      height: 246px;
+    }
+
     &__content {
       display: flex;
       padding-top: 86px;
+      max-width: 1440px;
+      justify-content: space-between;
+
+      @include var.respond(lg) {
+        padding-top: 60px;
+        max-width: 1024px;
+        flex-wrap: wrap;
+      }
     }
   }
 
@@ -58,18 +81,29 @@
     display: flex;
     align-items: center;
     height: 124px;
+    width: 100%;
 
     &__info {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      width: 94vw;
 
+      @include var.respond(lg) {
+        width: 96vw;
+      }
       .footer-bottom__link {
-        padding-left: 72px;
+        display: block;
         font-size: var.$font-size-sm;
         font-family: var.$font-primary;
         text-decoration: none;
         color: var.$color-white;
         @include var.transition;
+
+        &--center {
+          margin-left: 72px;
+        }
+
         &:hover {
           color: var.$color-font-gold;
         }
@@ -81,12 +115,16 @@
 /* NAVIGATION */
 
 .footer-nav {
-  margin-left: 140px;
+  margin-left: -18%;
   max-width: 363px;
   font-size: var.$font-size-sm;
   font-family: var.$font-primary;
   font-weight: 100;
   letter-spacing: 2px;
+
+  @include var.respond(lg) {
+    margin-left: 3%;
+  }
 
   &__list {
     list-style: none;
@@ -94,6 +132,10 @@
     grid-template-columns: repeat(2, auto);
     gap: 25px 172px;
     justify-content: center;
+
+    @include var.respond(lg) {
+      gap: 25px 123px;
+    }
   }
 
   &__link {

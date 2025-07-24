@@ -64,6 +64,16 @@ body {
   font-size: var.$font-size-md;
   font-weight: 700;
 
+  @include var.respond(sm) {
+  }
+
+  @include var.respond(md) {
+  }
+
+  @include var.respond(lg) {
+    font-size: 24px;
+  }
+
   &--font500 {
     font-weight: 500 !important;
   }

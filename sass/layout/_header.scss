@@ -11,25 +11,25 @@
     justify-content: space-between;
     align-items: center;
 
-    @include var.respond(sm) {
-      width: 420px;
-      height: 90px;
-    }
-
-    @include var.respond(md) {
-      width: 768px;
-      height: 110px;
-    }
-
     @include var.respond(lg) {
       max-width: 1024px;
       height: 130px;
+    }
+
+    @include var.respond(md) {
+      max-width: 728px;
+      height: 110px;
+    }
+
+    @include var.respond(sm) {
+      max-width: 380px;
+      height: 90px;
     }
   }
 }
 
 .nav {
-  flex-grow: 1;
+  // flex-grow: 1;
   max-width: 775px;
   font-size: var.$font-size-sm;
   font-family: var.$font-primary;

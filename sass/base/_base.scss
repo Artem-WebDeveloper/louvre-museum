@@ -21,9 +21,9 @@ body {
   margin: 0 auto;
   position: relative;
 
-  @include var.respond(sm) {
+  @include var.respond(lg) {
     width: 100%;
-    max-width: 380px;
+    max-width: 984px;
   }
 
   @include var.respond(md) {
@@ -31,9 +31,9 @@ body {
     max-width: 728px;
   }
 
-  @include var.respond(lg) {
+  @include var.respond(sm) {
     width: 100%;
-    max-width: 984px;
+    max-width: 380px;
   }
 }
 

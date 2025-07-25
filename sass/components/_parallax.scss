@@ -12,4 +12,8 @@
     background-attachment: scroll;
     background-position: center center;
   }
+
+  @include var.respond(md) {
+    height: 300px;
+  }
 }

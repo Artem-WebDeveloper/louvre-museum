@@ -1,19 +1,13 @@
 @use '../base/variables' as var;
 
 .welcome-box {
+  position: relative;
+  z-index: 3;
   width: 598px;
   height: 388px;
   padding-top: 152px;
   color: var.$color-white;
   letter-spacing: 2px;
-
-  @include var.respond(sm) {
-    height: 365px;
-  }
-
-  @include var.respond(md) {
-    height: 646px;
-  }
 
   @include var.respond(lg) {
     padding-top: 50px;
@@ -21,20 +15,30 @@
     height: 343px;
   }
 
+  @include var.respond(md) {
+    text-align: center;
+    padding-top: 0;
+    height: 100%;
+  }
+
+  @include var.respond(sm) {
+    height: 365px;
+  }
+
   &__paragraph {
     font-size: var.$font-size-md;
     margin-top: 26px;
     margin-bottom: 77px;
 
-    @include var.respond(sm) {
-    }
-
-    @include var.respond(md) {
-    }
-
     @include var.respond(lg) {
       font-size: 24px;
       margin-bottom: 48px;
+    }
+    @include var.respond(md) {
+      font-size: 20px;
+      margin-bottom: 0;
+      margin-bottom: 50px;
+      line-height: 100%;
     }
   }
 
@@ -54,16 +58,14 @@
       background-color: var.$color-font-gold;
     }
 
-    @include var.respond(sm) {
-    }
-
-    @include var.respond(md) {
-    }
-
     @include var.respond(lg) {
       font-size: 20px;
       padding: 20px 45px;
       line-height: 100%;
+    }
+
+    @include var.respond(md) {
+      display: none;
     }
   }
 }

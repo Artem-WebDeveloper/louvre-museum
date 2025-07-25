@@ -37,12 +37,12 @@ $font-size-xs: 18px;
 .u-margin-bottom-lg {
   margin-bottom: 103px;
 
-  @include respond(md) {
-    margin-bottom: 63px;
-  }
-
   @include respond(lg) {
     margin-bottom: 83px;
+  }
+
+  @include respond(md) {
+    margin-bottom: 63px;
   }
 }
 

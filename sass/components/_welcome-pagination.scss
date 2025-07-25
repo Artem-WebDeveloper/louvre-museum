@@ -1,6 +1,7 @@
 @use '../base/variables' as var;
 
 .welcome-pagination {
+  z-index: 3;
   width: 600px;
   height: 120px;
   position: absolute;
@@ -14,17 +15,22 @@
   font-size: var.$font-size-sm;
   color: var.$color-white;
 
-  @include var.respond(sm) {
-  }
-
-  @include var.respond(md) {
-  }
-
   @include var.respond(lg) {
     width: 700px;
     font-size: 20px;
     padding: 0 75px 0 225px;
   }
+
+  @include var.respond(md) {
+    position: static;
+    order: 3;
+    height: 100px;
+    padding: 0 150px;
+  }
+
+  /*   @include var.respond(md) {
+    order: 3;
+  } */
 
   &__nums {
     text-transform: uppercase;
@@ -53,17 +59,14 @@
       background-color: #d2b183;
     }
 
-    @include var.respond(sm) {
-      width: 7px;
-      height: 7px;
-    }
-
-    @include var.respond(md) {
-    }
-
     @include var.respond(lg) {
       width: 12px;
       height: 12px;
+    }
+
+    @include var.respond(sm) {
+      width: 7px;
+      height: 7px;
     }
   }
 

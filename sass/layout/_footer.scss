@@ -53,12 +53,6 @@
     height: 269px;
     border-bottom: 3px solid #666;
 
-    @include var.respond(sm) {
-    }
-
-    @include var.respond(md) {
-    }
-
     @include var.respond(lg) {
       height: 246px;
     }
@@ -78,20 +72,15 @@
   }
 
   &-bottom {
-    display: flex;
-    align-items: center;
-    height: 124px;
-    width: 100%;
+    background-color: var.$color-bg-dark;
+    padding: 50px 0;
 
     &__info {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 94vw;
+      width: 100%;
 
-      @include var.respond(lg) {
-        width: 96vw;
-      }
       .footer-bottom__link {
         display: block;
         font-size: var.$font-size-sm;
@@ -100,9 +89,9 @@
         color: var.$color-white;
         @include var.transition;
 
-        &--center {
-          margin-left: 72px;
-        }
+        // &--center {
+        //   margin-left: 72px;
+        // }
 
         &:hover {
           color: var.$color-font-gold;

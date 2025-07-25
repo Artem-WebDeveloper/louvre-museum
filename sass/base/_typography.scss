@@ -15,9 +15,9 @@ body {
   letter-spacing: 5px;
   line-height: 112.5%;
 
-  @include var.respond(sm) {
-    font-size: 28px;
-    line-height: 142.857%;
+  @include var.respond(lg) {
+    font-size: 50px;
+    line-height: 180%;
   }
 
   @include var.respond(md) {
@@ -25,9 +25,9 @@ body {
     line-height: 150%;
   }
 
-  @include var.respond(lg) {
-    font-size: 50px;
-    line-height: 180%;
+  @include var.respond(sm) {
+    font-size: 28px;
+    line-height: 142.857%;
   }
 
   &--gold {
@@ -46,14 +46,12 @@ body {
       height: 3px;
       background-color: var.$color-dark-red;
 
-      @include var.respond(sm) {
+      @include var.respond(lg) {
+        bottom: -16px;
       }
 
       @include var.respond(md) {
-      }
-
-      @include var.respond(lg) {
-        bottom: -16px;
+        bottom: -23px;
       }
     }
   }
@@ -64,18 +62,14 @@ body {
   font-size: var.$font-size-md;
   font-weight: 700;
 
-  @include var.respond(sm) {
-  }
-
-  @include var.respond(md) {
-  }
-
   @include var.respond(lg) {
-    font-size: 24px;
   }
 
   &--font500 {
     font-weight: 500 !important;
+    @include var.respond(lg) {
+      font-size: 24px;
+    }
   }
 }
 

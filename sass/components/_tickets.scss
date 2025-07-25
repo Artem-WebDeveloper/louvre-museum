@@ -4,15 +4,15 @@
   width: 50%;
   display: block;
 
-  @include var.respond(sm) {
-  }
-
-  @include var.respond(md) {
-  }
-
   @include var.respond(lg) {
     width: 71%;
     height: 440px;
+    object-fit: cover;
+  }
+
+  @include var.respond(md) {
+    width: 61.04%;
+    height: 340px;
     object-fit: cover;
   }
 }
@@ -85,18 +85,20 @@
   margin-top: 2px;
   width: 150px;
 
-  @include var.respond(sm) {
-  }
-
-  @include var.respond(md) {
-  }
-
   @include var.respond(lg) {
     width: 18%;
   }
 
+  @include var.respond(md) {
+    width: 24%;
+  }
+
   &__box {
     margin-top: 27px;
+
+    @include var.respond(md) {
+      margin-top: 40px;
+    }
   }
 
   &__text {
@@ -104,6 +106,10 @@
     font-weight: 300;
     font-size: var.$font-size-sm;
     margin-bottom: 15px;
+
+    @include var.respond(md) {
+      margin-bottom: 8px;
+    }
   }
 
   &__number {
@@ -118,10 +124,10 @@
 
     @include var.respond(lg) {
       gap: 29px;
+      margin-bottom: 25px;
     }
 
-    @include var.respond(lg) {
-      margin-bottom: 25px;
+    @include var.respond(md) {
     }
 
     &:last-of-type {
@@ -165,6 +171,10 @@
 
     @include var.respond(lg) {
       margin: 20px 0 74px 0;
+    }
+
+    @include var.respond(md) {
+      margin: 41px 0 44px 0;
     }
   }
 

@@ -43,12 +43,6 @@
     width: 960px;
     height: 620px;
 
-    @include var.respond(sm) {
-    }
-
-    @include var.respond(md) {
-    }
-
     @include var.respond(lg) {
       width: 694px;
       height: 454px;

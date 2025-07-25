@@ -149,6 +149,11 @@ body {
     font-size: 24px;
   }
 }
+@media (max-width: 1024px) {
+  .title-tertiary--font500 {
+    font-size: 20px;
+  }
+}
 
 .paragraph {
   font-family: "Roboto", sans-serif;
@@ -1500,6 +1505,13 @@ body {
     margin-top: -5px;
   }
 }
+@media (max-width: 768px) {
+  .contacts-content {
+    flex-direction: column;
+    margin-top: 0;
+    gap: 35px;
+  }
+}
 .contacts-content .contacts-box {
   width: 282px;
 }
@@ -1517,6 +1529,13 @@ body {
     font-size: 20px;
     margin-top: 32px;
     gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .contacts-content .contacts-box .contacts__list {
+    font-size: 18px;
+    margin-top: 35px;
+    gap: 9px;
   }
 }
 .contacts-content .contacts-box .contacts__list .contacts__item a {
@@ -1538,6 +1557,12 @@ body {
     height: 454px;
     object-fit: cover;
     background-position: 100% 0%;
+  }
+}
+@media (max-width: 768px) {
+  .contacts-content .contacts-map {
+    width: 100%;
+    height: 476px;
   }
 }
 

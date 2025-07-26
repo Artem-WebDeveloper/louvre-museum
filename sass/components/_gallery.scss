@@ -21,7 +21,7 @@
     height: 1080px;
   }
 
-  @include var.respond(md) {
+  @include var.respond(sm) {
     height: 637px;
   }
 

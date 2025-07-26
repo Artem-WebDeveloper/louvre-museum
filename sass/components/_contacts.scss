@@ -73,7 +73,7 @@
       width: 100%;
       height: 476px;
     }
-    @include var.respond(md) {
+    @include var.respond(sm) {
       width: 100%;
       height: 248px;
       background-position: 50% 50%;

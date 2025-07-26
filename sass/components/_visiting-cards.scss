@@ -20,7 +20,7 @@
     margin-bottom: 33px;
   }
 
-  @include var.respond(md) {
+  @include var.respond(sm) {
     margin-bottom: 0;
   }
 

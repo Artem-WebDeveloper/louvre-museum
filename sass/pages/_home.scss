@@ -181,7 +181,7 @@
       justify-content: start;
       gap: 8.3%;
       margin-top: -9px;
-      flex-wrap: wrap;
+      // flex-wrap: wrap;
     }
 
     @include var.respond(md) {

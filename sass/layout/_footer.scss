@@ -26,6 +26,12 @@
     @include var.respond(md) {
       margin-left: auto;
     }
+    @include var.respond(sm) {
+      margin-left: auto;
+      margin-right: auto;
+      gap: 5px;
+      margin-top: 0;
+    }
 
     .footer__link {
       width: 48px;
@@ -68,6 +74,10 @@
       border-bottom: 1px solid #666;
     }
 
+    @include var.respond(sm) {
+      min-height: 296px;
+    }
+
     &__content {
       display: flex;
       padding-top: 86px;
@@ -83,6 +93,12 @@
       @include var.respond(md) {
         padding-top: 50px;
         max-width: 638px;
+      }
+
+      @include var.respond(sm) {
+        flex-direction: column;
+        padding-top: 41px;
+        gap: 37px;
       }
     }
   }
@@ -102,6 +118,10 @@
       align-items: center;
       width: 100%;
 
+      @include var.respond(sm) {
+        font-size: 16px;
+      }
+
       .footer-bottom__link {
         display: block;
         font-size: var.$font-size-sm;
@@ -110,9 +130,15 @@
         color: var.$color-white;
         @include var.transition;
 
-        // &--center {
-        //   margin-left: 72px;
-        // }
+        @include var.respond(sm) {
+          font-size: 16px;
+        }
+
+        &--center {
+          @include var.respond(sm) {
+            display: none;
+          }
+        }
 
         &:hover {
           color: var.$color-font-gold;
@@ -140,6 +166,12 @@
     font-size: var.$font-size-xs;
   }
 
+  @include var.respond(sm) {
+    margin-left: 0;
+    max-width: 380px;
+    font-size: 16px;
+  }
+
   &__list {
     list-style: none;
     display: grid;
@@ -153,6 +185,42 @@
 
     @include var.respond(md) {
       gap: 20px 184px;
+    }
+
+    @include var.respond(sm) {
+      font-size: 16px;
+      grid-template-columns: repeat(3, auto);
+      gap: 20px 23%;
+      width: 100%;
+
+      .footer-nav__item:nth-child(1) {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .footer-nav__item:nth-child(2) {
+        // text-align: center;
+        grid-column: 2;
+        grid-row: 2;
+      }
+      .footer-nav__item:nth-child(3) {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      .footer-nav__item:nth-child(4) {
+        // text-align: end;
+        grid-column: 3;
+        grid-row: 1;
+      }
+      .footer-nav__item:nth-child(5) {
+        // text-align: center;
+        grid-column: 2;
+        grid-row: 1;
+      }
+      .footer-nav__item:nth-child(6) {
+        // text-align: end;
+        grid-column: 3;
+        grid-row: 2;
+      }
     }
   }
 

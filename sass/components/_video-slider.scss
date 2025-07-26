@@ -4,87 +4,28 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-
   &__item {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 36px 0 10px;
-    width: 452px;
-    height: 254px;
-    background-position: center;
-    background-size: contain;
-    position: relative;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    // width: 100%;
+    height: auto;
+    border: none;
+    max-width: 31.4%;
+    aspect-ratio: 16 / 9;
 
     @include var.respond(lg) {
-      width: 300px;
-      height: 170px;
+      max-width: 30.4%;
     }
 
     @include var.respond(md) {
-      width: 354px;
-      height: 199px;
+      max-width: 48.6%;
     }
 
     @include var.respond(sm) {
-      font-size: var.$font-size-xs;
-      width: 180px;
-      height: 101px;
-    }
-
-    &--1 {
-      background-image: url('../assets/video/poster3.jpg');
-    }
-    &--2 {
-      background-image: url('../assets/video/poster1.jpg');
+      max-width: 47.3%;
     }
     &--3 {
-      background-image: url('../assets/video/poster2.jpg');
       @include var.respond(md) {
         display: none;
       }
     }
-  }
-
-  &__play-icon {
-    width: 68px;
-    height: 48px;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    &:hover {
-      filter: brightness(0.7);
-      cursor: pointer;
-    }
-  }
-
-  &__video-title {
-    display: flex;
-    align-items: stretch;
-    gap: 10px;
-  }
-
-  &__avatar-channel {
-    width: 40px;
-    height: 40px;
-  }
-
-  &__name-video {
-    color: var.$color-white;
-    font-size: var.$font-size-xs;
-    font-weight: 400;
-    line-height: 213.9%;
-    height: 16px;
-  }
-
-  &__extends-icon {
-    width: 4px;
-    height: 16px;
-    margin-top: 11px;
   }
 }

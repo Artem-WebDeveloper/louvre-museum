@@ -62,7 +62,9 @@ body {
   font-size: var.$font-size-md;
   font-weight: 700;
 
-  @include var.respond(lg) {
+  @include var.respond(sm) {
+    font-size: 16px;
+    line-height: 100%;
   }
 
   &--font500 {
@@ -70,8 +72,13 @@ body {
     @include var.respond(lg) {
       font-size: 24px;
     }
-    @include var.respond(lg) {
+    @include var.respond(md) {
       font-size: 20px;
+    }
+
+    @include var.respond(sm) {
+      font-size: 16px;
+      line-height: 112.5%;
     }
   }
 }

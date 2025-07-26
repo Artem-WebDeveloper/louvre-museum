@@ -33,7 +33,6 @@
     }
 
     @include var.respond(sm) {
-      height: 365px;
     }
   }
 }
@@ -105,8 +104,8 @@
 
       @include var.respond(md) {
         margin-top: -60px;
-        width: 728px;
-        height: 705px;
+        width: 100%;
+        height: 100%;
       }
     }
   }
@@ -144,6 +143,18 @@
     @include var.respond(md) {
       gap: 20px;
     }
+
+    @include var.respond(sm) {
+      gap: 40px;
+    }
+  }
+
+  @include var.respond(md) {
+    margin-bottom: 37px;
+  }
+
+  @include var.respond(sm) {
+    margin-bottom: 0;
   }
 }
 
@@ -153,6 +164,10 @@
 
   @include var.respond(lg) {
     padding-top: 60px;
+  }
+
+  @include var.respond(md) {
+    padding-top: 40px;
   }
 }
 
@@ -171,6 +186,12 @@
 
     @include var.respond(md) {
       margin-top: 0;
+    }
+
+    @include var.respond(sm) {
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
     }
   }
 }

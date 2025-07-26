@@ -13,6 +13,8 @@ $font-size-md: 28px;
 $font-size-sm: 22px;
 $font-size-xs: 18px;
 
+$footer-padding-bottom: 10px;
+
 @mixin transition {
   transition: all 0.3s ease;
 }

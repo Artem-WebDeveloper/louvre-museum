@@ -25,7 +25,7 @@
 
 .player-btn {
   border: none;
-  background: none;
+  background: transparent;
   cursor: pointer;
   @include var.transition;
 
@@ -56,6 +56,11 @@
     width: 23px;
     height: 31px;
     order: 0;
+
+    @include var.respond(sm) {
+      width: 14px;
+      height: 18px;
+    }
   }
 
   &__volume-icon {
@@ -127,6 +132,7 @@
 
   @include var.respond(sm) {
     height: 50px;
+    justify-content: space-around;
   }
 
   .progress-bar {

@@ -15,10 +15,16 @@
     gap: 25px;
     justify-self: flex-end;
     list-style: none;
+    order: 3;
+    margin-top: 45px;
 
     @include var.respond(lg) {
-      margin-left: 9%;
+      margin-left: auto;
       margin-bottom: 0px;
+    }
+
+    @include var.respond(md) {
+      margin-left: auto;
     }
 
     .footer__link {
@@ -50,11 +56,16 @@
   }
 
   &-top {
-    height: 269px;
+    min-height: 269px;
     border-bottom: 3px solid #666;
-
+    padding-bottom: 10px;
     @include var.respond(lg) {
-      height: 246px;
+      min-height: 246px;
+    }
+
+    @include var.respond(md) {
+      min-height: 308px;
+      border-bottom: 1px solid #666;
     }
 
     &__content {
@@ -68,12 +79,22 @@
         max-width: 1024px;
         flex-wrap: wrap;
       }
+
+      @include var.respond(md) {
+        padding-top: 50px;
+        max-width: 638px;
+      }
     }
   }
 
   &-bottom {
     background-color: var.$color-bg-dark;
     padding: 50px 0;
+
+    @include var.respond(md) {
+      font-size: var.$font-size-sm;
+      padding: 40px 0;
+    }
 
     &__info {
       display: flex;
@@ -115,6 +136,10 @@
     margin-left: 3%;
   }
 
+  @include var.respond(md) {
+    font-size: var.$font-size-xs;
+  }
+
   &__list {
     list-style: none;
     display: grid;
@@ -124,6 +149,10 @@
 
     @include var.respond(lg) {
       gap: 25px 123px;
+    }
+
+    @include var.respond(md) {
+      gap: 20px 184px;
     }
   }
 

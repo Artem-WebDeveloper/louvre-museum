@@ -15,6 +15,11 @@
       height: 10px;
       width: 10px;
     }
+
+    @include var.respond(sm) {
+      height: 8px;
+      width: 8px;
+    }
     &--active {
       background-color: #333;
     }
@@ -22,6 +27,18 @@
     &:hover {
       filter: brightness(0.7);
       cursor: pointer;
+    }
+  }
+
+  &__arrow-left,
+  &__arrow-right {
+    width: 10px;
+    height: 12px;
+    display: block;
+
+    @include var.respond(sm) {
+      height: 8px;
+      width: 7px;
     }
   }
 }

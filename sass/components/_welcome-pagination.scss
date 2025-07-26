@@ -22,27 +22,39 @@
   }
 
   @include var.respond(md) {
+    width: 100%;
     position: static;
     order: 3;
     height: 100px;
-    padding: 0 150px;
+    padding: 0 22.5%;
+    flex-wrap: wrap;
   }
 
-  /*   @include var.respond(md) {
-    order: 3;
-  } */
+  @include var.respond(sm) {
+    font-size: 16px;
+    height: 80px;
+    padding: 0 19.5%;
+  }
 
   &__nums {
     text-transform: uppercase;
     display: flex;
     justify-content: start;
     gap: 10px;
+
+    @include var.respond(sm) {
+      gap: 6px;
+    }
   }
 
   &__carousel {
     display: flex;
     justify-content: space-around;
     gap: 25px;
+
+    @include var.respond(sm) {
+      gap: 10px;
+    }
   }
 
   &__slide {
@@ -77,6 +89,11 @@
     width: 80px;
     height: 8px;
 
+    @include var.respond(sm) {
+      width: 55px;
+      height: 8px;
+    }
+
     .slider-arrow {
       background: transparent;
       border: none;
@@ -88,6 +105,16 @@
       transition: transform 0.3s;
       color: var.$color-white;
       @include var.transition;
+
+      &__icon {
+        width: 30px;
+        height: 8px;
+
+        @include var.respond(sm) {
+          width: 20px;
+          height: 8px;
+        }
+      }
 
       &:hover {
         color: #d2b183;

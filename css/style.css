@@ -268,7 +268,7 @@ body {
   color: #fff;
   transition: all 0.3s ease;
 }
-.mobile-nav-btn__icon[name=close-outline] {
+.mobile-nav-btn__icon[data-icon=close-outline] {
   display: none;
 }
 .mobile-nav-btn__icon:hover {

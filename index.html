@@ -12,7 +12,7 @@
     <link rel="icon" href="assets/favicon.ico" />
     <title>museum</title>
 
-    <script src="scripts/index.js" type="module" defer></script>
+    <script src="scripts/index.js" type="module"></script>
   </head>
   <body>
     <header class="header">
@@ -45,7 +45,7 @@
 
           <button class="mobile-nav-btn">
             <svg
-              name="menu-outline"
+              data-icon="menu-outline"
               class="mobile-nav-btn__icon mobile-nav-btn__icon--open"
               xmlns="http://www.w3.org/2000/svg"
               width="32"
@@ -58,7 +58,7 @@
             </svg>
 
             <svg
-              name="close-outline"
+              data-icon="close-outline"
               class="mobile-nav-btn__icon mobile-nav-btn__icon--close"
               xmlns="http://www.w3.org/2000/svg"
               width="25"
@@ -84,7 +84,7 @@
       <h1 class="visually-hidden">Louvre Museum</h1>
       <section class="section-welcome section--dark">
         <div class="container">
-          <!-- MOBILE NAVIGATION -->
+          <!-- MOBILE NAVIGATION START -->
           <div class="mobile-navigation">
             <nav class="mobile-nav">
               <ul class="mobile-nav__list">
@@ -277,7 +277,7 @@
               </li>
             </ul>
           </div>
-          <!-- ----------------- -->
+          <!-- MOBILE NAVIGATION END -->
 
           <div class="welcome-wrapper">
             <div class="slider-img-wrapper">
@@ -547,7 +547,6 @@
                 class="video-slider__item video-slider__item--1"
                 src="https://www.youtube.com/embed/aWmJ5DgyWPI"
                 title="YouTube video"
-                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>
@@ -556,7 +555,6 @@
                 class="video-slider__item video-slider__item--2"
                 src="https://www.youtube.com/embed/2OR0OCr6uRE"
                 title="YouTube video"
-                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>
@@ -565,7 +563,6 @@
                 class="video-slider__item video-slider__item--3"
                 src="https://www.youtube.com/embed/NOhDysLnTvY"
                 title="YouTube video"
-                frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
               </iframe>

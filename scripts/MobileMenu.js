@@ -2,8 +2,8 @@ class MobileMenu {
   _btnNav = document.querySelector('.mobile-nav-btn');
   _mobileNav = document.querySelector('.mobile-navigation');
   _welcomeBoxTitle = document.querySelector('.welcome-box');
-  _menuOpenIcon = document.querySelector('[name="menu-outline"]');
-  _menuCloseIcon = document.querySelector('[name="close-outline"]');
+  _menuOpenIcon = document.querySelector('[data-icon="menu-outline"]');
+  _menuCloseIcon = document.querySelector('[data-icon="close-outline"]');
   constructor() {
     this._btnNav.addEventListener('click', this._switchMenu.bind(this));
   }

@@ -86,7 +86,7 @@
     color: var.$color-white;
     @include var.transition;
 
-    &[name='close-outline'] {
+    &[data-icon='close-outline'] {
       display: none;
     }
 

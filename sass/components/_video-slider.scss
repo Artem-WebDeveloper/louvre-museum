@@ -1,0 +1,31 @@
+@use '../base/variables' as var;
+
+.video-slider {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  &__item {
+    // width: 100%;
+    height: auto;
+    border: none;
+    max-width: 31.4%;
+    aspect-ratio: 16 / 9;
+
+    @include var.respond(lg) {
+      max-width: 30.4%;
+    }
+
+    @include var.respond(md) {
+      max-width: 48.6%;
+    }
+
+    @include var.respond(sm) {
+      max-width: 47.3%;
+    }
+    &--3 {
+      @include var.respond(md) {
+        display: none;
+      }
+    }
+  }
+}

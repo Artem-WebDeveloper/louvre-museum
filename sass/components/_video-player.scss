@@ -10,11 +10,22 @@
   height: 650px;
   object-fit: cover;
   object-position: right 37%;
+
+  @include var.respond(lg) {
+    height: 444px;
+  }
+
+  @include var.respond(md) {
+    height: 329px;
+  }
+  @include var.respond(sm) {
+    height: 172px;
+  }
 }
 
 .player-btn {
   border: none;
-  background: none;
+  background: transparent;
   cursor: pointer;
   @include var.transition;
 
@@ -26,11 +37,66 @@
     width: 220px;
     height: 220px;
     border-radius: 50%;
+
+    @include var.respond(lg) {
+      width: 152px;
+      height: 152px;
+    }
+    @include var.respond(md) {
+      width: 80px;
+      height: 80px;
+    }
+    @include var.respond(sm) {
+      width: 50px;
+      height: 50px;
+    }
   }
 
   &--small {
     width: 23px;
     height: 31px;
+    order: 0;
+
+    @include var.respond(sm) {
+      width: 14px;
+      height: 18px;
+    }
+  }
+
+  &__volume-icon {
+    width: 38px;
+    height: 31px;
+    order: 2;
+
+    @include var.respond(lg) {
+      width: 26px;
+      height: 20px;
+    }
+
+    @include var.respond(md) {
+      order: 1;
+    }
+
+    @include var.respond(sm) {
+      width: 18px;
+      height: 14px;
+    }
+  }
+
+  &__fullscreen-icon {
+    width: 35px;
+    height: 35px;
+    order: 5;
+
+    @include var.respond(lg) {
+      width: 26px;
+      height: 26px;
+    }
+
+    @include var.respond(sm) {
+      width: 18px;
+      height: 18px;
+    }
   }
 
   &__img {
@@ -55,6 +121,20 @@
   justify-content: space-around;
   align-items: center;
 
+  @include var.respond(lg) {
+    height: 60px;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+  @include var.respond(md) {
+    height: 53px;
+  }
+
+  @include var.respond(sm) {
+    height: 50px;
+    justify-content: space-around;
+  }
+
   .progress-bar {
     cursor: pointer;
     background: linear-gradient(
@@ -70,6 +150,14 @@
     transition: background 450ms ease-in;
     -webkit-appearance: none;
 
+    @include var.respond(lg) {
+      height: 5px;
+    }
+
+    @include var.respond(sm) {
+      height: 4px;
+    }
+
     &::-webkit-slider-thumb {
       width: 15px;
       height: 15px;
@@ -77,14 +165,48 @@
       -webkit-appearance: none;
 
       background: var.$color-white;
+
+      @include var.respond(lg) {
+        width: 13px;
+        height: 13px;
+      }
+
+      @include var.respond(sm) {
+        width: 10px;
+        height: 10px;
+      }
     }
 
     &--duration {
       width: 929px;
+      order: 1;
+
+      @include var.respond(lg) {
+        width: 564px;
+      }
+
+      @include var.respond(md) {
+        order: 2;
+        width: 486px;
+      }
+
+      @include var.respond(sm) {
+        width: 200px;
+      }
     }
 
     &--volume {
       width: 155px;
+      order: 4;
+      @include var.respond(lg) {
+        width: 143px;
+      }
+      @include var.respond(md) {
+        display: none;
+      }
+      @include var.respond(sm) {
+        display: none;
+      }
     }
   }
 }

@@ -15,6 +15,21 @@ body {
   letter-spacing: 5px;
   line-height: 112.5%;
 
+  @include var.respond(lg) {
+    font-size: 50px;
+    line-height: 180%;
+  }
+
+  @include var.respond(md) {
+    font-size: 40px;
+    line-height: 150%;
+  }
+
+  @include var.respond(sm) {
+    font-size: 28px;
+    line-height: 142.857%;
+  }
+
   &--gold {
     color: var.$color-font-gold;
   }
@@ -30,6 +45,14 @@ body {
       right: 0;
       height: 3px;
       background-color: var.$color-dark-red;
+
+      @include var.respond(lg) {
+        bottom: -16px;
+      }
+
+      @include var.respond(md) {
+        bottom: -23px;
+      }
     }
   }
 }
@@ -39,8 +62,24 @@ body {
   font-size: var.$font-size-md;
   font-weight: 700;
 
+  @include var.respond(sm) {
+    font-size: 16px;
+    line-height: 100%;
+  }
+
   &--font500 {
     font-weight: 500 !important;
+    @include var.respond(lg) {
+      font-size: 24px;
+    }
+    @include var.respond(md) {
+      font-size: 20px;
+    }
+
+    @include var.respond(sm) {
+      font-size: 16px;
+      line-height: 112.5%;
+    }
   }
 }
 

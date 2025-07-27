@@ -1,7 +1,19 @@
+@use '../base/variables' as var;
+
 .parallax {
   width: 100%;
   height: 400px;
-  background-image: url(../../assets/img/parallax.jpg);
+  background-image: url(../assets/img/parallax.jpg);
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
+
+  @include var.respond(lg) {
+    background-attachment: scroll;
+    background-position: center center;
+  }
+
+  @include var.respond(md) {
+    height: 300px;
+  }
 }

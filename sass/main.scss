@@ -5,6 +5,7 @@
 @use 'layout/footer';
 @use 'pages/home';
 
+@use 'components/welcome-slider';
 @use 'components/welcome-box';
 @use 'components/welcome-pagination';
 @use 'components/visiting-cards';
@@ -15,3 +16,4 @@
 @use 'components/tickets';
 @use 'components/parallax';
 @use 'components/contacts';
+@use 'components/mobile-nav';

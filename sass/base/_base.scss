@@ -1,3 +1,5 @@
+@use '../base/variables' as var;
+
 *,
 *::before,
 *::after {
@@ -8,17 +10,33 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .container {
-  width: 1440px;
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
+
+  @include var.respond(lg) {
+    width: 100%;
+    max-width: 984px;
+  }
+
+  @include var.respond(md) {
+    width: 100%;
+    max-width: 728px;
+  }
+
+  @include var.respond(sm) {
+    width: 100%;
+    max-width: 380px;
+  }
 }
 
 .visually-hidden {

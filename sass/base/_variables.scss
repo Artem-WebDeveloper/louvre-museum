@@ -13,13 +13,39 @@ $font-size-md: 28px;
 $font-size-sm: 22px;
 $font-size-xs: 18px;
 
+$footer-padding-bottom: 10px;
+
 @mixin transition {
   transition: all 0.3s ease;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 420px) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
 }
 
 /* UTILITIES */
 .u-margin-bottom-lg {
   margin-bottom: 103px;
+
+  @include respond(lg) {
+    margin-bottom: 83px;
+  }
+
+  @include respond(md) {
+    margin-bottom: 63px;
+  }
 }
 
 .u-margin-bottom-md {

@@ -1,6 +1,7 @@
 @use '../base/variables' as var;
 
 .welcome-box {
+  @include var.transition;
   position: relative;
   z-index: 3;
   width: 598px;
@@ -72,6 +73,14 @@
 
     @include var.respond(md) {
       display: none;
+    }
+  }
+
+  &--hidden {
+    @include var.respond(lg) {
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
     }
   }
 }

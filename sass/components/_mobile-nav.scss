@@ -1,7 +1,11 @@
 @use '../base/variables' as var;
 
 .mobile-navigation {
-  transition: all 0.5s ease-in;
+  @include var.transition;
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 
   z-index: 11;
   position: absolute;
@@ -14,6 +18,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  &--open {
+    @include var.respond(lg) {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
 
   @include var.respond(md) {
     width: 100%;

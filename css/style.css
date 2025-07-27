@@ -267,14 +267,6 @@ body {
 .mobile-nav-btn__icon {
   color: #fff;
   transition: all 0.3s ease;
-  /* &--open {
-       display: block;
-     }
-
-     &--close {
-       display: none;
-     }
-  */
 }
 .mobile-nav-btn__icon[name=close-outline] {
   display: none;
@@ -780,6 +772,7 @@ body {
 }
 
 .welcome-box {
+  transition: all 0.3s ease;
   position: relative;
   z-index: 3;
   width: 598px;
@@ -858,6 +851,13 @@ body {
 @media (max-width: 768px) {
   .welcome-box__btn {
     display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .welcome-box--hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
   }
 }
 
@@ -1841,7 +1841,11 @@ body {
 }
 
 .mobile-navigation {
-  transition: all 0.5s ease-in;
+  transition: all 0.3s ease;
+  transform: translateX(-100%);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
   z-index: 11;
   position: absolute;
   top: 0;
@@ -1852,6 +1856,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 1024px) {
+  .mobile-navigation--open {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
 }
 @media (max-width: 768px) {
   .mobile-navigation {

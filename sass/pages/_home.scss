@@ -39,27 +39,28 @@
 
 .section-explore {
   .explore-container {
-    max-width: 1440px;
+    max-width: 1480px;
     margin: 0 auto;
     position: relative;
     display: flex;
     gap: 60px;
     color: var.$color-white;
+    padding: 0 20px;
 
     @include var.respond(lg) {
       width: 100%;
-      max-width: 984px;
+      max-width: 1024px;
       flex-direction: column;
     }
 
     @include var.respond(md) {
       width: 100%;
-      max-width: 728px;
+      max-width: 768px;
     }
 
     @include var.respond(sm) {
       width: 100%;
-      max-width: 380px;
+      max-width: 420px;
     }
 
     &__paragraph {

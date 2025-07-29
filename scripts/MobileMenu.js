@@ -9,16 +9,41 @@ class MobileMenu {
   }
 
   _switchMenu() {
-    this._mobileNav.classList.toggle('mobile-navigation--open');
-    this._welcomeBoxTitle.classList.toggle('welcome-box--hidden');
-
     const menuIsOpen = this._mobileNav.classList.contains(
       'mobile-navigation--open'
     );
 
-    this._menuOpenIcon.style.display = menuIsOpen ? 'none' : 'block';
-    this._menuCloseIcon.style.display = menuIsOpen ? 'block' : 'none';
+    if (menuIsOpen) this._closeMenu();
+    else {
+      this._openMenu();
+      document.addEventListener('click', this._handleOutsideClick);
+    }
   }
+
+  _openMenu() {
+    this._mobileNav.classList.add('mobile-navigation--open');
+    this._welcomeBoxTitle.classList.add('welcome-box--hidden');
+    this._menuOpenIcon.style.display = 'none';
+    this._menuCloseIcon.style.display = 'block';
+  }
+
+  _closeMenu() {
+    this._mobileNav.classList.remove('mobile-navigation--open');
+    this._welcomeBoxTitle.classList.remove('welcome-box--hidden');
+    this._menuOpenIcon.style.display = 'block';
+    this._menuCloseIcon.style.display = 'none';
+
+    document.removeEventListener('click', this._handleOutsideClick);
+  }
+
+  _handleOutsideClick = e => {
+    const clickedInsideMenu = this._mobileNav.contains(e.target);
+    const clickedBtn = this._btnNav.contains(e.target);
+
+    if (!clickedInsideMenu && !clickedBtn) {
+      this._closeMenu();
+    }
+  };
 }
 
 export default MobileMenu;

@@ -60,16 +60,26 @@
   }
 
   &__slide {
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
     cursor: pointer;
     width: 16px;
     height: 16px;
     background-color: var.$color-white;
     @include var.transition;
 
-    &:hover {
+    /*  &:hover {
       background-color: #d2b183;
+    } */
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        background-color: #d2b183;
+      }
     }
+
     &--active {
+      pointer-events: none;
       background-color: #d2b183;
     }
 
@@ -118,8 +128,10 @@
         }
       }
 
-      &:hover {
-        color: #d2b183;
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: #d2b183;
+        }
       }
     }
   }

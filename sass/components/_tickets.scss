@@ -162,8 +162,11 @@
     font-weight: 400;
     cursor: pointer;
     @include var.transition;
-    &:hover {
-      color: var.$color-font-gold;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var.$color-font-gold;
+      }
     }
   }
 

@@ -9,7 +9,6 @@
   background-attachment: fixed;
 
   @include var.respond(lg) {
-    background-attachment: scroll;
     background-position: center center;
   }
 

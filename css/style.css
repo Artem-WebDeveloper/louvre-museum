@@ -747,7 +747,7 @@ body {
   user-select: none;
   -webkit-user-drag: none;
   display: flex;
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0.7s ease-in-out;
 }
 .slider-img-wrapper .slider-img {
   user-select: none;
@@ -1505,6 +1505,13 @@ body {
 }
 .gallery-img {
   width: 100%;
+  transform: translateY(30%);
+  transition: all 0.5s;
+  opacity: 0;
+}
+.gallery-img--active {
+  opacity: 1;
+  transform: translateY(0);
 }
 .gallery .column {
   display: flex;
@@ -1776,7 +1783,6 @@ body {
 }
 @media (max-width: 1024px) {
   .parallax {
-    background-attachment: scroll;
     background-position: center center;
   }
 }

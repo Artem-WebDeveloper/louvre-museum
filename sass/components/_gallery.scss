@@ -43,6 +43,14 @@
 
   &-img {
     width: 100%;
+    transform: translateY(30%);
+    transition: all 0.5s;
+    opacity: 0;
+
+    &--active {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
   .column {
     display: flex;

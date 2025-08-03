@@ -4,4 +4,4 @@ import Gallery from './Gallery.js';
 
 const mobileMenu = new MobileMenu();
 const welcomeSlider = new WelcomeSlider();
-// const gallery = new Gallery(15);
+const gallery = new Gallery(15);

@@ -43,13 +43,13 @@
 
   &-img {
     width: 100%;
-    transform: translateY(30%);
-    transition: all 0.5s;
+    transform: translateY(30%) scale(0.95);
+    transition: all 0.8s;
     opacity: 0;
 
     &--active {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
   }
   .column {

@@ -21,6 +21,12 @@
   @include var.respond(sm) {
     height: 172px;
   }
+
+  &--fullscreen {
+    height: 90vh !important;
+    width: 100vw !important;
+    object-fit: cover;
+  }
 }
 
 .player-btn {
@@ -37,6 +43,8 @@
     width: 220px;
     height: 220px;
     border-radius: 50%;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
 
     @include var.respond(lg) {
       width: 152px;
@@ -101,6 +109,7 @@
 
   &__img {
     width: 100%;
+    height: 100%;
   }
 
   &:hover {

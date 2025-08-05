@@ -1191,6 +1191,11 @@ body {
     height: 172px;
   }
 }
+.video-element--fullscreen {
+  height: 90vh !important;
+  width: 100vw !important;
+  object-fit: cover;
+}
 
 .player-btn {
   border: none;
@@ -1206,6 +1211,8 @@ body {
   width: 220px;
   height: 220px;
   border-radius: 50%;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+  opacity: 1;
 }
 @media (max-width: 1024px) {
   .player-btn--big {
@@ -1277,6 +1284,7 @@ body {
 }
 .player-btn__img {
   width: 100%;
+  height: 100%;
 }
 .player-btn:hover {
   filter: brightness(0.7);

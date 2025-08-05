@@ -508,10 +508,30 @@
             </p>
           </div>
 
-          <img
-            class="explore-container__img"
-            src="assets/img/explore-slider/example.jpg"
-            alt="Picture Explorer" />
+          <div class="explore-container__img">
+            <div class="explore-container__img-wrapper">
+              <img
+                class="explore-container__img-before explore-slider-img"
+                src="assets/img/explore-slider/before.jpg"
+                alt="Picture Explorer" />
+              <img
+                class="explore-container__img-after explore-slider-img"
+                src="assets/img/explore-slider/after.jpg"
+                alt="Picture Explorer" />
+              <div
+                class="explore-container__img-slider-line"
+                aria-hidden="true"></div>
+              <div
+                class="explore-container__img-slider-btn"
+                aria-hidden="true"></div>
+            </div>
+            <input
+              type="range"
+              min="0"
+              max="100"
+              value="50"
+              class="explore-container__img-slider" />
+          </div>
         </div>
       </section>
       <section class="section section-video" id="video">

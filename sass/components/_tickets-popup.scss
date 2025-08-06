@@ -9,13 +9,21 @@
   background-color: rgba(255, 255, 255, 0.93);
   z-index: 999;
 
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  overflow-y: auto;
+
   &__content {
     position: absolute;
     top: 50%;
     left: 50%;
-    // width: 1440px;
     transform: translate(-50%, -50%);
     background-color: var.$color-white;
+    overflow-y: auto;
+    /* position: relative;
+    max-height: 100%;
+    overflow-y: auto; */
 
     display: flex;
     box-shadow: 0px 3px 20px rgba(var.$color-black, 0.4);
@@ -37,7 +45,7 @@
   }
 
   &__right {
-    // max-width: 400px;
+    width: 530px;
     border: 1px solid var.$color-bg-dark;
     padding: 25px 30px;
   }
@@ -59,7 +67,7 @@
     font-weight: 400;
     line-height: 100%;
     position: relative;
-    margin-bottom: 73px;
+    margin-bottom: 75px;
 
     &::after {
       content: '';
@@ -81,7 +89,7 @@
 
   .form {
     &__group {
-      margin-bottom: 20px;
+      margin-bottom: 18px;
       position: relative;
       display: block;
 
@@ -98,7 +106,7 @@
       line-height: 100%;
       font-weight: 400;
       font-family: var.$font-primary;
-      padding: 13px 15px 13px 44px;
+      padding: 11px 15px 11px 44px;
       border-radius: 0;
       border: 1px solid var.$color-bg-dark;
 
@@ -122,8 +130,8 @@
       }
 
       &[name='visit-time'] {
-        padding-top: 12px;
-        padding-bottom: 12px;
+        padding-top: 9px;
+        padding-bottom: 9px;
       }
     }
   }
@@ -140,7 +148,7 @@
       line-height: 100%;
       text-transform: capitalize;
       position: relative;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
 
       &::after {
         content: '';
@@ -156,7 +164,7 @@
     .ticket-type-choice {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
       align-items: center;
 
       &:last-child {
@@ -211,9 +219,14 @@
 
   /* RIGHT INNER*/
 
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__review {
     position: relative;
-    margin-bottom: 22px;
+    margin-bottom: 30px;
 
     & h3 {
       color: #272727;
@@ -241,7 +254,7 @@
       font-size: var.$font-size-sm;
       font-weight: 500 !important;
       line-height: 100%;
-      margin-bottom: 10px !important;
+      margin-bottom: 15px !important;
     }
   }
   &__review-img {
@@ -253,12 +266,61 @@
   }
 
   .bill-box {
+    font-size: var.$font-size-sm;
+    margin-bottom: 20px;
     &__ticket-type {
       display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      align-items: flex-end;
+      position: relative;
+
+      &:nth-last-of-type(2) {
+        margin-bottom: 35px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          right: 0;
+          bottom: -15px;
+          height: 2px;
+          background-color: #740c11;
+        }
+      }
+
+      & p {
+        display: flex;
+        align-items: end;
+        gap: 10px;
+      }
+
+      .amount-tickets {
+        font-size: var.$font-size-xs;
+        color: #a4a4a3;
+        background-color: var.$color-bg-dark;
+        width: 32px;
+        height: 20px;
+        display: inline-block;
+        text-align: center;
+        border-radius: 5px;
+      }
+    }
+
+    .total-bill {
+      display: flex;
+      justify-content: space-between;
+      font-size: var.$font-size-lg;
+      font-weight: 400;
     }
   }
 
   /* CARDS */
+
+  &__cards-box {
+    position: relative;
+  }
+
   &__card--front {
     width: 360px;
     height: 211px;
@@ -269,5 +331,38 @@
     );
     padding: 15px 20px;
     border-radius: 4px;
+    z-index: 111;
+    box-shadow: 0px 1px 20px rgba(var.$color-black, 0.1);
+    margin-bottom: 56px;
+  }
+
+  &__card--back {
+    z-index: -2;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 360px;
+    height: 211px;
+    background: rgb(147, 147, 147);
+
+    border-radius: 4px;
+  }
+
+  &__btn {
+    background-color: #710707;
+    color: var.$color-white;
+    width: 220px;
+    height: 45px;
+    font-family: var.$font-primary;
+    font-size: var.$font-size-sm;
+    font-weight: 400;
+    border: none;
+    @include var.transition;
+    cursor: pointer;
+    margin-left: auto;
+
+    &:hover {
+      background-color: var.$color-font-gold;
+    }
   }
 }

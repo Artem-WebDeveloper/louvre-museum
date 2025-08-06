@@ -2156,6 +2156,10 @@ body {
   left: 0;
   background-color: rgba(255, 255, 255, 0.93);
   z-index: 999;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  overflow-y: auto;
   /* FORM */
   /* COUNTER TICKETS */
   /* RIGHT INNER*/
@@ -2167,6 +2171,10 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #fff;
+  overflow-y: auto;
+  /* position: relative;
+  max-height: 100%;
+  overflow-y: auto; */
   display: flex;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.4);
   padding: 10px 20px;
@@ -2183,6 +2191,7 @@ body {
   flex: 1 1 0;
 }
 .tickets-popup__right {
+  width: 530px;
   border: 1px solid #030303;
   padding: 25px 30px;
 }
@@ -2202,7 +2211,7 @@ body {
   font-weight: 400;
   line-height: 100%;
   position: relative;
-  margin-bottom: 73px;
+  margin-bottom: 75px;
 }
 .tickets-popup__form-name::after {
   content: "";
@@ -2218,7 +2227,7 @@ body {
   height: 41px;
 }
 .tickets-popup .form__group {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   position: relative;
   display: block;
 }
@@ -2233,7 +2242,7 @@ body {
   line-height: 100%;
   font-weight: 400;
   font-family: "Roboto", sans-serif;
-  padding: 13px 15px 13px 44px;
+  padding: 11px 15px 11px 44px;
   border-radius: 0;
   border: 1px solid #030303;
 }
@@ -2254,8 +2263,8 @@ body {
   width: 47.5%;
 }
 .tickets-popup .form__input[name=visit-time] {
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 9px;
+  padding-bottom: 9px;
 }
 .tickets-popup .tickets-entry-box {
   padding: 10px 15px;
@@ -2269,7 +2278,7 @@ body {
   line-height: 100%;
   text-transform: capitalize;
   position: relative;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 .tickets-popup .tickets-entry-box--heading::after {
   content: "";
@@ -2283,7 +2292,7 @@ body {
 .tickets-popup .tickets-entry-box .ticket-type-choice {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 22px;
+  margin-bottom: 20px;
   align-items: center;
 }
 .tickets-popup .tickets-entry-box .ticket-type-choice:last-child {
@@ -2326,9 +2335,13 @@ body {
 .tickets-popup__number-input[type=number] {
   -moz-appearance: textfield;
 }
+.tickets-popup__info {
+  display: flex;
+  flex-direction: column;
+}
 .tickets-popup__review {
   position: relative;
-  margin-bottom: 22px;
+  margin-bottom: 30px;
 }
 .tickets-popup__review h3 {
   color: #272727;
@@ -2352,7 +2365,7 @@ body {
   font-size: 22px;
   font-weight: 500 !important;
   line-height: 100%;
-  margin-bottom: 10px !important;
+  margin-bottom: 15px !important;
 }
 .tickets-popup__review-img {
   position: absolute;
@@ -2361,8 +2374,52 @@ body {
   width: 150px;
   height: 120px;
 }
+.tickets-popup .bill-box {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
 .tickets-popup .bill-box__ticket-type {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: flex-end;
+  position: relative;
+}
+.tickets-popup .bill-box__ticket-type:nth-last-of-type(2) {
+  margin-bottom: 35px;
+}
+.tickets-popup .bill-box__ticket-type:nth-last-of-type(2)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -15px;
+  height: 2px;
+  background-color: #740c11;
+}
+.tickets-popup .bill-box__ticket-type p {
+  display: flex;
+  align-items: end;
+  gap: 10px;
+}
+.tickets-popup .bill-box__ticket-type .amount-tickets {
+  font-size: 18px;
+  color: #a4a4a3;
+  background-color: #030303;
+  width: 32px;
+  height: 20px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 5px;
+}
+.tickets-popup .bill-box .total-bill {
+  display: flex;
+  justify-content: space-between;
+  font-size: 32px;
+  font-weight: 400;
+}
+.tickets-popup__cards-box {
+  position: relative;
 }
 .tickets-popup__card--front {
   width: 360px;
@@ -2370,6 +2427,35 @@ body {
   background: linear-gradient(to right bottom, rgb(147, 147, 147) 0%, rgb(188, 188, 188) 100%);
   padding: 15px 20px;
   border-radius: 4px;
+  z-index: 111;
+  box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 56px;
+}
+.tickets-popup__card--back {
+  z-index: -2;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 360px;
+  height: 211px;
+  background: rgb(147, 147, 147);
+  border-radius: 4px;
+}
+.tickets-popup__btn {
+  background-color: #710707;
+  color: #fff;
+  width: 220px;
+  height: 45px;
+  font-family: "Roboto", sans-serif;
+  font-size: 22px;
+  font-weight: 400;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-left: auto;
+}
+.tickets-popup__btn:hover {
+  background-color: #9d8665;
 }
 
 /*# sourceMappingURL=style.css.map */

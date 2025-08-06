@@ -2148,4 +2148,228 @@ body {
   display: block;
 }
 
+.tickets-popup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.93);
+  z-index: 999;
+  /* FORM */
+  /* COUNTER TICKETS */
+  /* RIGHT INNER*/
+  /* CARDS */
+}
+.tickets-popup__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  display: flex;
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  justify-content: space-between;
+  gap: 40px;
+  color: #030303;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+}
+.tickets-popup__left {
+  width: 400px;
+  flex: 1 1 0;
+}
+.tickets-popup__right {
+  border: 1px solid #030303;
+  padding: 25px 30px;
+}
+.tickets-popup__heading {
+  color: #9d8665;
+  font-family: "Forum", serif;
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+.tickets-popup__form-name {
+  color: #710707;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+  position: relative;
+  margin-bottom: 73px;
+}
+.tickets-popup__form-name::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: #710707;
+}
+.tickets-popup__logo {
+  width: 85px;
+  height: 41px;
+}
+.tickets-popup .form__group {
+  margin-bottom: 20px;
+  position: relative;
+  display: block;
+}
+.tickets-popup .form__group--half {
+  display: flex;
+  justify-content: space-between;
+}
+.tickets-popup .form__input {
+  width: 100%;
+  font-size: 18px;
+  color: #030303;
+  line-height: 100%;
+  font-weight: 400;
+  font-family: "Roboto", sans-serif;
+  padding: 13px 15px 13px 44px;
+  border-radius: 0;
+  border: 1px solid #030303;
+}
+.tickets-popup .form__input::placeholder {
+  color: #030303;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+}
+.tickets-popup .form__input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+.tickets-popup .form__input--half {
+  width: 47.5%;
+}
+.tickets-popup .form__input[name=visit-time] {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+.tickets-popup .tickets-entry-box {
+  padding: 10px 15px;
+  border: 1px solid #030303;
+}
+.tickets-popup .tickets-entry-box--heading {
+  color: #9d8665;
+  font-family: "Forum", serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: capitalize;
+  position: relative;
+  margin-bottom: 22px;
+}
+.tickets-popup .tickets-entry-box--heading::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #710707;
+}
+.tickets-popup .tickets-entry-box .ticket-type-choice {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+  align-items: center;
+}
+.tickets-popup .tickets-entry-box .ticket-type-choice:last-child {
+  margin-bottom: 0;
+}
+.tickets-popup__number {
+  display: flex;
+  border: 1px solid #030303;
+}
+.tickets-popup__number-btn {
+  color: #fff;
+  background-color: #030303;
+  width: 35px;
+  height: 25px;
+  border: none;
+  appearance: none;
+  cursor: pointer;
+  box-shadow: none;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+.tickets-popup__number-btn:hover {
+  background-color: #9d8665;
+}
+.tickets-popup__number-input {
+  all: unset;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  line-height: 25px;
+  width: 35px;
+  height: 25px;
+  padding-right: 1px;
+}
+.tickets-popup__number-input::-webkit-outer-spin-button, .tickets-popup__number-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.tickets-popup__number-input[type=number] {
+  -moz-appearance: textfield;
+}
+.tickets-popup__review {
+  position: relative;
+  margin-bottom: 22px;
+}
+.tickets-popup__review h3 {
+  color: #272727;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 100%;
+  margin-bottom: 5px;
+}
+.tickets-popup__review p {
+  font-weight: 300;
+  margin-bottom: 8px;
+}
+.tickets-popup__review p:last-child {
+  margin-bottom: 0;
+}
+.tickets-popup__review p span {
+  margin-right: 10px;
+}
+.tickets-popup__review-subheading {
+  color: #740c11;
+  font-size: 22px;
+  font-weight: 500 !important;
+  line-height: 100%;
+  margin-bottom: 10px !important;
+}
+.tickets-popup__review-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 120px;
+}
+.tickets-popup .bill-box__ticket-type {
+  display: flex;
+}
+.tickets-popup__card--front {
+  width: 360px;
+  height: 211px;
+  background: linear-gradient(to right bottom, rgb(147, 147, 147) 0%, rgb(188, 188, 188) 100%);
+  padding: 15px 20px;
+  border-radius: 4px;
+}
+
 /*# sourceMappingURL=style.css.map */

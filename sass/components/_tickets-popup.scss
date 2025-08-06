@@ -1,0 +1,273 @@
+@use '../base/variables' as var;
+
+.tickets-popup {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.93);
+  z-index: 999;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // width: 1440px;
+    transform: translate(-50%, -50%);
+    background-color: var.$color-white;
+
+    display: flex;
+    box-shadow: 0px 3px 20px rgba(var.$color-black, 0.4);
+    padding: 10px 20px;
+    justify-content: space-between;
+    gap: 40px;
+
+    color: var.$color-bg-dark;
+
+    font-family: var.$font-primary;
+    font-size: var.$font-size-xs;
+    font-weight: 400;
+    line-height: 100%;
+  }
+
+  &__left {
+    width: 400px;
+    flex: 1 1 0;
+  }
+
+  &__right {
+    // max-width: 400px;
+    border: 1px solid var.$color-bg-dark;
+    padding: 25px 30px;
+  }
+
+  &__heading {
+    color: var.$color-font-gold;
+    font-family: var.$font-secondary;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+  }
+
+  &__form-name {
+    color: var.$color-dark-red;
+    font-family: var.$font-primary;
+    font-size: var.$font-size-xs;
+    font-weight: 400;
+    line-height: 100%;
+    position: relative;
+    margin-bottom: 73px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background-color: var.$color-dark-red;
+    }
+  }
+
+  &__logo {
+    width: 85px;
+    height: 41px;
+  }
+
+  /* FORM */
+
+  .form {
+    &__group {
+      margin-bottom: 20px;
+      position: relative;
+      display: block;
+
+      &--half {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+
+    &__input {
+      width: 100%;
+      font-size: var.$font-size-xs;
+      color: var.$color-bg-dark;
+      line-height: 100%;
+      font-weight: 400;
+      font-family: var.$font-primary;
+      padding: 13px 15px 13px 44px;
+      border-radius: 0;
+      border: 1px solid var.$color-bg-dark;
+
+      &::placeholder {
+        color: var.$color-bg-dark;
+        font-size: var.$font-size-xs;
+        font-weight: 400;
+        line-height: 100%;
+      }
+
+      &-icon {
+        position: absolute;
+        left: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+      }
+
+      &--half {
+        width: 47.5%;
+      }
+
+      &[name='visit-time'] {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
+  }
+
+  .tickets-entry-box {
+    padding: 10px 15px;
+    border: 1px solid var.$color-bg-dark;
+
+    &--heading {
+      color: var.$color-font-gold;
+      font-family: var.$font-secondary;
+      font-size: var.$font-size-xs;
+      font-weight: 400;
+      line-height: 100%;
+      text-transform: capitalize;
+      position: relative;
+      margin-bottom: 22px;
+
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background-color: var.$color-dark-red;
+      }
+    }
+
+    .ticket-type-choice {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 22px;
+      align-items: center;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  /* COUNTER TICKETS */
+  &__number {
+    display: flex;
+    border: 1px solid var.$color-bg-dark;
+
+    &-btn {
+      color: var.$color-white;
+      background-color: var.$color-bg-dark;
+      width: 35px;
+      height: 25px;
+      border: none;
+      appearance: none;
+      cursor: pointer;
+      box-shadow: none;
+      font-size: 20px;
+      @include var.transition;
+
+      &:hover {
+        background-color: var.$color-font-gold;
+      }
+    }
+
+    &-input {
+      all: unset;
+      box-sizing: border-box;
+      font-family: var.$font-primary;
+      font-size: var.$font-size-xs;
+      text-align: center;
+      line-height: 25px;
+      width: 35px;
+      height: 25px;
+      padding-right: 1px;
+    }
+
+    &-input::-webkit-outer-spin-button,
+    &-input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+    &-input[type='number'] {
+      -moz-appearance: textfield;
+    }
+  }
+
+  /* RIGHT INNER*/
+
+  &__review {
+    position: relative;
+    margin-bottom: 22px;
+
+    & h3 {
+      color: #272727;
+      font-size: var.$font-size-lg;
+      font-weight: 500;
+      line-height: 100%;
+      margin-bottom: 5px;
+    }
+
+    & p {
+      font-weight: 300;
+      margin-bottom: 8px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      & span {
+        margin-right: 10px;
+      }
+    }
+
+    &-subheading {
+      color: #740c11;
+      font-size: var.$font-size-sm;
+      font-weight: 500 !important;
+      line-height: 100%;
+      margin-bottom: 10px !important;
+    }
+  }
+  &__review-img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+    height: 120px;
+  }
+
+  .bill-box {
+    &__ticket-type {
+      display: flex;
+    }
+  }
+
+  /* CARDS */
+  &__card--front {
+    width: 360px;
+    height: 211px;
+    background: linear-gradient(
+      to right bottom,
+      rgb(147, 147, 147) 0%,
+      rgba(188, 188, 188, 1) 100%
+    );
+    padding: 15px 20px;
+    border-radius: 4px;
+  }
+}

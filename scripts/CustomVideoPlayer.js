@@ -13,7 +13,19 @@ class CustomVideoPlayer {
 
   _prevVolume;
   _isMute = false;
+  _isPlayerVisible = false;
   static DEFAULT_VOLUME = 50;
+  static DEFAULT_PROGRESS_COLOR = '#710707';
+
+  _observer = new IntersectionObserver(
+    ([entry]) => {
+      this._isPlayerVisible = entry.isIntersecting;
+    },
+    {
+      threshold: 0.15,
+    }
+  );
+
   constructor() {
     this._video.addEventListener('click', this._togglePlay.bind(this));
     this._video.addEventListener('play', this._updateBtn.bind(this));
@@ -42,12 +54,18 @@ class CustomVideoPlayer {
 
     this._progressVolume.value = CustomVideoPlayer.DEFAULT_VOLUME;
     this._updateVolume();
-    this._updateBgSlider(this._progressDuration, '#710707');
+    this._updateBgSlider(
+      this._progressDuration,
+      CustomVideoPlayer.DEFAULT_PROGRESS_COLOR
+    );
 
     document.addEventListener(
       'fullscreenchange',
       this._closeFullscreenForce.bind(this)
     );
+
+    this._observer.observe(this._videoPlayer);
+    document.addEventListener('keydown', this._handleControlVideo.bind(this));
   }
 
   _togglePlay() {
@@ -68,7 +86,10 @@ class CustomVideoPlayer {
     }
 
     this._updateBtnVolume();
-    this._updateBgSlider(this._progressVolume, '#710707');
+    this._updateBgSlider(
+      this._progressVolume,
+      CustomVideoPlayer.DEFAULT_PROGRESS_COLOR
+    );
   }
 
   _toggleFullscreen() {
@@ -98,13 +119,19 @@ class CustomVideoPlayer {
   _updateDurationVideo() {
     this._video.currentTime =
       (this._progressDuration.value / 100) * this._video.duration;
-    this._updateBgSlider(this._progressDuration, '#710707');
+    this._updateBgSlider(
+      this._progressDuration,
+      CustomVideoPlayer.DEFAULT_PROGRESS_COLOR
+    );
   }
 
   _updateProgressDuration() {
     this._progressDuration.value =
       (this._video.currentTime / this._video.duration) * 100;
-    this._updateBgSlider(this._progressDuration, '#710707');
+    this._updateBgSlider(
+      this._progressDuration,
+      CustomVideoPlayer.DEFAULT_PROGRESS_COLOR
+    );
   }
 
   _updateBgSlider(slider, color) {
@@ -120,7 +147,10 @@ class CustomVideoPlayer {
 
   _updateVolume() {
     this._video.volume = this._progressVolume.value / 100;
-    this._updateBgSlider(this._progressVolume, '#710707');
+    this._updateBgSlider(
+      this._progressVolume,
+      CustomVideoPlayer.DEFAULT_PROGRESS_COLOR
+    );
 
     if (this._video.volume == 0) {
       this._isMute = true;
@@ -137,6 +167,51 @@ class CustomVideoPlayer {
     } else {
       this._video.classList.add('video-element--fullscreen');
     }
+  }
+
+  _handleControlVideo(e) {
+    const activeElement = document.activeElement;
+    const tag = activeElement.tagName.toLowerCase();
+    const isSliderFocused =
+      activeElement === this._progressDuration ||
+      activeElement === this._progressVolume;
+
+    if (!['input', 'textarea'].includes(tag) || isSliderFocused) {
+      if (!this._isPlayerVisible) return;
+
+      switch (e.code) {
+        case 'Space':
+          e.preventDefault();
+          this._togglePlay();
+          break;
+        case 'KeyM':
+          this._toggleMute();
+          break;
+        case 'KeyF':
+          this._toggleFullscreen();
+          break;
+        case 'Period':
+          if (e.shiftKey) this._slowDownVideo();
+          break;
+        case 'Comma':
+          if (e.shiftKey) this._speedUpVideo();
+          break;
+      }
+    }
+  }
+
+  _speedUpVideo() {
+    this._video.playbackRate = +Math.min(
+      this._video.playbackRate + 0.25,
+      3
+    ).toFixed(2);
+  }
+
+  _slowDownVideo() {
+    this._video.playbackRate = +Math.max(
+      this._video.playbackRate - 0.25,
+      0.25
+    ).toFixed(2);
   }
 }
 

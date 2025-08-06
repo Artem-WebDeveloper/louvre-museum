@@ -1192,7 +1192,7 @@ body {
   }
 }
 .video-element--fullscreen {
-  height: 90vh !important;
+  height: 91vh !important;
   width: 100vw !important;
   object-fit: cover;
 }

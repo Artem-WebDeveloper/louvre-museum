@@ -2178,7 +2178,7 @@ body {
   display: flex;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.4);
   padding: 10px 20px;
-  justify-content: space-between;
+  justify-content: center;
   gap: 40px;
   color: #030303;
   font-family: "Roboto", sans-serif;
@@ -2216,7 +2216,7 @@ body {
 .tickets-popup__form-name::after {
   content: "";
   position: absolute;
-  bottom: -10px;
+  bottom: -15px;
   left: 0;
   right: 0;
   height: 3px;
@@ -2430,9 +2430,66 @@ body {
   z-index: 111;
   box-shadow: 0px 1px 20px rgba(0, 0, 0, 0.1);
   margin-bottom: 56px;
+  position: relative;
 }
 .tickets-popup__card--back {
-  z-index: -2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.tickets-popup__card--back .card-secure-info {
+  margin-right: 20px;
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+}
+.tickets-popup__card--back .card-secure-info .cards-form__input {
+  height: 35px;
+  margin-bottom: 4px;
+  padding: 10px;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  border: none;
+}
+.tickets-popup__card--back .card-secure-info .cards-form__label {
+  color: #161615;
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 4px;
+}
+.tickets-popup__card--back .card-secure-info__hint {
+  margin-left: 10px;
+  color: #161615;
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 120%;
+  width: 55px;
+}
+.tickets-popup__card--visa {
+  position: absolute;
+  top: 34px;
+  right: 22px;
+  width: 55px;
+  height: 16px;
+}
+.tickets-popup__card--mastercard {
+  position: absolute;
+  top: 66px;
+  right: 21px;
+  width: 53px;
+  height: 32px;
+}
+.tickets-popup__card--line-decoration {
+  margin-top: 26px;
+  width: 360px;
+  height: 45px;
+  background: #161615;
+  margin-bottom: 12px;
+}
+.tickets-popup__card--back {
+  z-index: 1;
   position: absolute;
   top: 30px;
   right: 0;
@@ -2440,6 +2497,41 @@ body {
   height: 211px;
   background: rgb(147, 147, 147);
   border-radius: 4px;
+}
+.tickets-popup .cards-form__group {
+  width: 215px;
+}
+.tickets-popup .cards-form__group:not(:last-child) {
+  margin-bottom: 10px;
+}
+.tickets-popup .cards-form__group--cardholder {
+  width: 100%;
+}
+.tickets-popup .cards-form__group .cards-form__label {
+  display: block;
+  color: #161615;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+.tickets-popup .cards-form__group-date-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+.tickets-popup .cards-form__group .cards-form__input {
+  padding: 10px;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  border: none;
+}
+.tickets-popup .cards-form__group .cards-form__input::placeholder {
+  color: #161615;
+}
+.tickets-popup .cards-form__group .cards-form__input--half {
+  width: 46.5%;
 }
 .tickets-popup__btn {
   background-color: #710707;

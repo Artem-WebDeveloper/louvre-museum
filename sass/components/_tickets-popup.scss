@@ -20,15 +20,16 @@
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var.$color-white;
+    // background-color: rgba(255, 255, 255, 0.1);
     overflow-y: auto;
     /* position: relative;
     max-height: 100%;
     overflow-y: auto; */
-
+    // flex-wrap: wrap;
     display: flex;
     box-shadow: 0px 3px 20px rgba(var.$color-black, 0.4);
     padding: 10px 20px;
-    justify-content: space-between;
+    justify-content: center;
     gap: 40px;
 
     color: var.$color-bg-dark;
@@ -72,7 +73,7 @@
     &::after {
       content: '';
       position: absolute;
-      bottom: -10px;
+      bottom: -15px;
       left: 0;
       right: 0;
       height: 3px;
@@ -321,23 +322,88 @@
     position: relative;
   }
 
-  &__card--front {
-    width: 360px;
-    height: 211px;
-    background: linear-gradient(
-      to right bottom,
-      rgb(147, 147, 147) 0%,
-      rgba(188, 188, 188, 1) 100%
-    );
-    padding: 15px 20px;
-    border-radius: 4px;
-    z-index: 111;
-    box-shadow: 0px 1px 20px rgba(var.$color-black, 0.1);
-    margin-bottom: 56px;
-  }
+  &__card {
+    &--front {
+      width: 360px;
+      height: 211px;
+      background: linear-gradient(
+        to right bottom,
+        rgb(147, 147, 147) 0%,
+        rgba(188, 188, 188, 1) 100%
+      );
+      padding: 15px 20px;
+      border-radius: 4px;
+      z-index: 111;
+      box-shadow: 0px 1px 20px rgba(var.$color-black, 0.1);
+      margin-bottom: 56px;
+      position: relative;
+    }
 
+    &--back {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      .card-secure-info {
+        margin-right: 20px;
+        width: 75px;
+        display: flex;
+        flex-direction: column;
+
+        & .cards-form__input {
+          height: 35px;
+          margin-bottom: 4px;
+          padding: 10px;
+          width: 100%;
+          font-family: var.$font-primary;
+          font-size: 12px;
+          font-weight: 400;
+          border: none;
+        }
+
+        & .cards-form__label {
+          color: #161615;
+          font-size: 12px;
+          text-align: center;
+          margin-bottom: 4px;
+        }
+
+        &__hint {
+          margin-left: 10px;
+          color: #161615;
+          font-size: 10px;
+          font-weight: 400;
+          line-height: 120%;
+          width: 55px;
+        }
+      }
+    }
+
+    &--visa {
+      position: absolute;
+      top: 34px;
+      right: 22px;
+      width: 55px;
+      height: 16px;
+    }
+    &--mastercard {
+      position: absolute;
+      top: 66px;
+      right: 21px;
+      width: 53px;
+      height: 32px;
+    }
+
+    &--line-decoration {
+      margin-top: 26px;
+      width: 360px;
+      height: 45px;
+      background: #161615;
+      margin-bottom: 12px;
+    }
+  }
   &__card--back {
-    z-index: -2;
+    z-index: 1;
     position: absolute;
     top: 30px;
     right: 0;
@@ -346,6 +412,48 @@
     background: rgb(147, 147, 147);
 
     border-radius: 4px;
+  }
+
+  .cards-form__group {
+    width: 215px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    &--cardholder {
+      width: 100%;
+    }
+    .cards-form__label {
+      display: block;
+      color: #161615;
+      font-family: var.$font-primary;
+      font-size: 12px;
+      font-weight: 400;
+      margin-bottom: 2px;
+    }
+
+    &-date-inputs {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .cards-form__input {
+      padding: 10px;
+      width: 100%;
+      font-family: var.$font-primary;
+      font-size: 12px;
+      font-weight: 400;
+      border: none;
+
+      &::placeholder {
+        color: #161615;
+      }
+
+      &--half {
+        width: 46.5%;
+      }
+    }
   }
 
   &__btn {

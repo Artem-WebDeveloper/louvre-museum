@@ -1742,6 +1742,8 @@ body {
   }
 }
 .tickets-buy .btn-buy {
+  cursor: pointer;
+  border: none;
   transform: translateX(-25px);
   background-color: #000;
   color: #fff;
@@ -2150,41 +2152,68 @@ body {
 
 .tickets-popup {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.93);
   z-index: 999;
-  /* display: flex;
+  display: flex;
   justify-content: center;
-  align-items: center; */
-  overflow-y: auto;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding: 20px 40px;
+  overflow: hidden;
+  transform: translate(0);
   /* FORM */
   /* COUNTER TICKETS */
   /* RIGHT INNER*/
   /* CARDS */
 }
+.tickets-popup--hiden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translate(-100%);
+}
 .tickets-popup__content {
-  position: absolute;
-  top: 50%;
+  position: relative;
+  /* top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
   background-color: #fff;
   overflow-y: auto;
   /* position: relative;
   max-height: 100%;
   overflow-y: auto; */
+  flex-wrap: wrap;
+  max-height: calc(100vh - 40px);
+  margin: 0 auto;
   display: flex;
   box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.4);
-  padding: 10px 20px;
-  justify-content: center;
+  padding: 40px;
+  justify-content: flex-start;
   gap: 40px;
   color: #030303;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 100%;
+}
+.tickets-popup__btn-close {
+  color: #030303;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  font-size: 40px;
+  cursor: pointer;
+  line-height: 0.6;
+  transition: all 0.3s ease;
+}
+.tickets-popup__btn-close:hover {
+  color: #9d8665;
 }
 .tickets-popup__left {
   width: 400px;

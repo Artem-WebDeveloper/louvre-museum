@@ -206,6 +206,8 @@
   }
 
   .btn-buy {
+    cursor: pointer;
+    border: none;
     transform: translateX(-(175px - 150px));
     background-color: var.$color-black;
     color: var.$color-white;

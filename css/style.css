@@ -2307,6 +2307,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   pointer-events: none;
+  z-index: 55;
 }
 .tickets-popup .form__input--half {
   width: 47.5%;
@@ -2600,6 +2601,14 @@ body {
 }
 .tickets-popup__btn:hover {
   background-color: #9d8665;
+}
+
+.form__input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 
 /*# sourceMappingURL=style.css.map */

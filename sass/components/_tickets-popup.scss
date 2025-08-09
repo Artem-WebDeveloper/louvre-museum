@@ -175,6 +175,7 @@
         top: 50%;
         transform: translateY(-50%);
         pointer-events: none;
+        z-index: 55;
       }
 
       &--half {
@@ -527,4 +528,12 @@
       background-color: var.$color-font-gold;
     }
   }
+}
+
+.form__input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }

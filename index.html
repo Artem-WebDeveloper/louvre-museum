@@ -10,9 +10,21 @@
       href="https://fonts.googleapis.com/css2?family=Forum&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet" />
     <link rel="icon" href="assets/favicon.ico" />
-    <title>museum</title>
 
-    <script defer src="scripts/index.js" type="module"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin="" />
+
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""></script>
+
+    <script src="scripts/index.js" type="module"></script>
+    <title>museum</title>
   </head>
   <body>
     <header class="header">
@@ -595,33 +607,35 @@
               </div>
             </div>
 
-            <div class="video-slider">
-              <iframe
-                class="video-slider__item video-slider__item--1"
-                src="https://www.youtube.com/embed/aWmJ5DgyWPI"
-                title="YouTube video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
+            <div class="video-slider-container">
+              <div class="video-slider">
+                <iframe
+                  class="video-slider__item video-slider__item--1"
+                  src="https://www.youtube.com/embed/aWmJ5DgyWPI"
+                  title="YouTube video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
 
-              <iframe
-                class="video-slider__item video-slider__item--2"
-                src="https://www.youtube.com/embed/2OR0OCr6uRE"
-                title="YouTube video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
+                <iframe
+                  class="video-slider__item video-slider__item--2"
+                  src="https://www.youtube.com/embed/2OR0OCr6uRE"
+                  title="YouTube video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
 
-              <iframe
-                class="video-slider__item video-slider__item--3"
-                src="https://www.youtube.com/embed/NOhDysLnTvY"
-                title="YouTube video"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen>
-              </iframe>
+                <iframe
+                  class="video-slider__item video-slider__item--3"
+                  src="https://www.youtube.com/embed/NOhDysLnTvY"
+                  title="YouTube video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+              </div>
             </div>
             <div class="video-pagination">
-              <button class="player-btn">
+              <button class="player-btn" id="video-slider-btn-left">
                 <svg
                   class="video-pagination__arrow-left"
                   xmlns="http://www.w3.org/2000/svg"
@@ -643,7 +657,7 @@
               <div class="video-pagination__circle">&nbsp;</div>
               <div class="video-pagination__circle">&nbsp;</div>
 
-              <button class="player-btn">
+              <button class="player-btn" id="video-slider-btn-right">
                 <svg
                   class="video-pagination__arrow-right"
                   xmlns="http://www.w3.org/2000/svg"
@@ -850,7 +864,8 @@
                 </li>
               </ul>
             </div>
-            <div class="contacts-map"></div>
+            <!-- <div id="map" class="contacts-map"></div> -->
+            <div id="map"></div>
           </div>
         </div>
       </section>
@@ -1111,6 +1126,10 @@
                   placeholder="E-mail"
                   required
                   id="e-mail" />
+
+                <p class="form__group--error" id="error-email">
+                  Длина e-mail не менее 3 и не более 15 символов
+                </p>
               </div>
               <div class="form__group">
                 <span class="form__input-icon">
@@ -1131,6 +1150,10 @@
                   placeholder="Phone"
                   required
                   id="phone" />
+
+                <p class="form__group--error" id="error-phone">
+                  Телефон может содержать только цифры
+                </p>
               </div>
 
               <div class="form__group">
@@ -1398,5 +1421,28 @@
       </form>
     </div>
     <!-- PopUp END -->
+
+    <button class="btn-back-to-top btn-back-to-top--hidden">
+      <svg
+        width="40px"
+        height="40px"
+        viewBox="0 0 24 24"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g
+          id="SVGRepo_tracerCarrier"
+          stroke-linecap="round"
+          stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path
+            d="M12 20L12 4M12 4L18 10M12 4L6 10"
+            stroke="#000000"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </g>
+      </svg>
+    </button>
   </body>
 </html>

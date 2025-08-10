@@ -14,6 +14,7 @@ class Gallery {
   constructor(amountImgs) {
     this.amountImgs = amountImgs;
     this.imgs = Gallery.shuffle(this._createImgesPath());
+
     this._viewGalleryImg();
   }
 

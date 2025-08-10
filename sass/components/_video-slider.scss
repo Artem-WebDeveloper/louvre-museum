@@ -1,15 +1,23 @@
 @use '../base/variables' as var;
 
-.video-slider {
+.video-slider-container {
+  overflow: hidden;
   width: 100%;
+}
+
+.video-slider {
+  // width: 100%;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   &__item {
     // width: 100%;
-    height: auto;
+    // height: auto;
+    // border: none;
+    // max-width: 31.4%;
+    // aspect-ratio: 16 / 9;
+    flex: 0 0 31.4%; // для больших экранов — 3 в ряд
+    aspect-ratio: 16/9;
     border: none;
-    max-width: 31.4%;
-    aspect-ratio: 16 / 9;
 
     @include var.respond(lg) {
       max-width: 30.4%;

@@ -1,17 +1,23 @@
 import MobileMenu from './MobileMenu.js';
 import WelcomeSlider from './WelcomeSlider.js';
+import VideoSlider from './VideoSlider.js';
 import Gallery from './Gallery.js';
 import ExploreSlider from './ExploreSlider.js';
 import CustomVideoPlayer from './CustomVideoPlayer.js';
 import TicketsForm from './TicketsForm.js';
 import TicketsCalculator from './TicketsCalculator.js';
 import TicketsCalculatorPopup from './TicketsCalculatorPopup.js';
+import Map from './Map.js';
+import ButtonUp from './ButtonUp.js';
 
 const mobileMenu = new MobileMenu();
 const welcomeSlider = new WelcomeSlider();
+const videoSlider = new VideoSlider();
 const gallery = new Gallery(15);
 const exploreSlider = new ExploreSlider();
 const customVideoPlayer = new CustomVideoPlayer();
 const ticketsForm = new TicketsForm();
 const ticketsCalculator = new TicketsCalculator();
 const ticketsCalculatorPopup = new TicketsCalculatorPopup();
+const map = new Map();
+const buttonUp = new ButtonUp();

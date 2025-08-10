@@ -1352,7 +1352,14 @@ body {
 }
 .video-controls .progress-bar {
   cursor: pointer;
-  background: linear-gradient(to right, #710707 0%, #710707 54%, #c4c4c4 36%, #c4c4c4 100%);
+  /* background: linear-gradient(
+    to right,
+    var.$color-dark-red 0%,
+    var.$color-dark-red 54%,
+    #c4c4c4 36%,
+    #c4c4c4 100%
+  ); */
+  background: #c4c4c4;
   border: none;
   height: 8px;
   outline: none;
@@ -1435,25 +1442,19 @@ body {
 
 .video-slider {
   display: flex;
+  gap: 3%;
+  transition: transform 0.5s ease;
 }
 .video-slider__item {
   flex: 0 0 31.4%;
+  width: 31.4%;
   aspect-ratio: 16/9;
   border: none;
 }
-@media (max-width: 1024px) {
-  .video-slider__item {
-    max-width: 30.4%;
-  }
-}
 @media (max-width: 768px) {
   .video-slider__item {
-    max-width: 48.6%;
-  }
-}
-@media (max-width: 420px) {
-  .video-slider__item {
-    max-width: 47.3%;
+    flex: 0 0 48.6%;
+    width: 48.6%;
   }
 }
 @media (max-width: 768px) {

@@ -146,13 +146,14 @@
 
   .progress-bar {
     cursor: pointer;
-    background: linear-gradient(
+    /* background: linear-gradient(
       to right,
       var.$color-dark-red 0%,
       var.$color-dark-red 54%,
       #c4c4c4 36%,
       #c4c4c4 100%
-    );
+    ); */
+    background: #c4c4c4;
     border: none;
     height: 8px;
     outline: none;

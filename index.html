@@ -23,6 +23,7 @@
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""></script>
 
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="scripts/index.js" type="module"></script>
     <title>museum</title>
   </head>
@@ -610,7 +611,7 @@
             <div class="video-slider-container">
               <div class="video-slider">
                 <iframe
-                  class="video-slider__item video-slider__item--1"
+                  class="video-slider__item"
                   src="https://www.youtube.com/embed/aWmJ5DgyWPI"
                   title="YouTube video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -618,7 +619,23 @@
                 </iframe>
 
                 <iframe
-                  class="video-slider__item video-slider__item--2"
+                  class="video-slider__item"
+                  src="https://www.youtube.com/embed/Vi5D6FKhRmo"
+                  title="YouTube video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+
+                <iframe
+                  class="video-slider__item"
+                  src="https://www.youtube.com/embed/NOhDysLnTvY"
+                  title="YouTube video"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen>
+                </iframe>
+
+                <iframe
+                  class="video-slider__item"
                   src="https://www.youtube.com/embed/2OR0OCr6uRE"
                   title="YouTube video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -626,8 +643,8 @@
                 </iframe>
 
                 <iframe
-                  class="video-slider__item video-slider__item--3"
-                  src="https://www.youtube.com/embed/NOhDysLnTvY"
+                  class="video-slider__item"
+                  src="https://www.youtube.com/embed/zp1BXPX8jcU"
                   title="YouTube video"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen>
@@ -649,13 +666,14 @@
                 </svg>
               </button>
               <div
-                class="video-pagination__circle video-pagination__circle--active">
+                class="video-pagination__circle video-pagination__circle--active"
+                data-slide="0">
                 &nbsp;
               </div>
-              <div class="video-pagination__circle">&nbsp;</div>
-              <div class="video-pagination__circle">&nbsp;</div>
-              <div class="video-pagination__circle">&nbsp;</div>
-              <div class="video-pagination__circle">&nbsp;</div>
+              <div class="video-pagination__circle" data-slide="1">&nbsp;</div>
+              <div class="video-pagination__circle" data-slide="2">&nbsp;</div>
+              <!-- <div class="video-pagination__circle" data-slide="3">&nbsp;</div>
+              <div class="video-pagination__circle" data-slide="4">&nbsp;</div> -->
 
               <button class="player-btn" id="video-slider-btn-right">
                 <svg

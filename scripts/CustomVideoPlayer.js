@@ -213,6 +213,18 @@ class CustomVideoPlayer {
       0.25
     ).toFixed(2);
   }
+
+  resetPlayerState() {
+    if (this._video.src) this._video.pause();
+    this._video.currentTime = 0;
+
+    this._progressDuration.value = 0;
+    this._updateBgSlider(
+      this._progressDuration,
+      CustomVideoPlayer.DEFAULT_PROGRESS_COLOR
+    );
+    this._updateBtn();
+  }
 }
 
 export default CustomVideoPlayer;

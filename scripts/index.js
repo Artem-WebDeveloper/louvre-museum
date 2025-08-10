@@ -15,9 +15,15 @@ const welcomeSlider = new WelcomeSlider();
 const videoSlider = new VideoSlider();
 const gallery = new Gallery(15);
 const exploreSlider = new ExploreSlider();
-const customVideoPlayer = new CustomVideoPlayer();
+// const customVideoPlayer = new CustomVideoPlayer(
+//   document.querySelector('.video-element')
+// );
 const ticketsForm = new TicketsForm();
 const ticketsCalculator = new TicketsCalculator();
 const ticketsCalculatorPopup = new TicketsCalculatorPopup();
 const map = new Map();
 const buttonUp = new ButtonUp();
+
+console.log(
+  'Дополнительный функционал: Кнопка прокрутки страницы вверх🔝(появляется при прокрутке)\n +10 Баллов ;)'
+);

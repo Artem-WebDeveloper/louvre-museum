@@ -8,6 +8,10 @@ Pixel-perfect adaptive landing page for the Louvre museum, built with vanilla
 HTML/CSS/JS - no frameworks. Learning project (RS School) focused on
 semantic markup, responsive layout and DOM-driven interactivity from scratch
 
+### Live-Demo
+
+- https://artem-webdeveloper.github.io/louvre-museum/
+
 ### Specification
 
 - https://github.com/rolling-scopes-school/tasks/blob/master/tasks/museum/museum.md

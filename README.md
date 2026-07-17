@@ -1,5 +1,7 @@
 # Louvre Museum Landing Page
 
+<img width="1013" height="612" alt="museum-landing" src="https://github.com/user-attachments/assets/962ce551-faf4-4149-bf06-d3040bb52e4c" />
+
 ## Project Overview
 
 Pixel-perfect adaptive landing page for the Louvre museum, built with vanilla

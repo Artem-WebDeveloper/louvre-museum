@@ -8,11 +8,11 @@ semantic markup, responsive layout and DOM-driven interactivity from scratch
 
 ### Specification
 
-https://github.com/rolling-scopes-school/tasks/blob/master/tasks/museum/museum.md
+- https://github.com/rolling-scopes-school/tasks/blob/master/tasks/museum/museum.md
 
 ### Figma design
 
-https://www.figma.com/design/xkP6mIaq7uG1Uru7CpasXq/Museum-04.09?node-id=0-1&p=f&t=7b0tURqsAFRxVp7R-0
+- https://www.figma.com/design/xkP6mIaq7uG1Uru7CpasXq/Museum-04.09?node-id=0-1&p=f&t=7b0tURqsAFRxVp7R-0
 
 ## Features
 
@@ -22,3 +22,6 @@ https://www.figma.com/design/xkP6mIaq7uG1Uru7CpasXq/Museum-04.09?node-id=0-1&p=f
 - Custom video player with controls
 - Ticket booking popup / modal form
 - Scroll-triggered animations in the gallery section
+
+## License
+MIT © 2026 Artem Gapich

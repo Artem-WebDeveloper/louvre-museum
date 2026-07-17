@@ -1,16 +1,16 @@
 {
-  "name": "museum",
+  "name": "louvre-museum",
   "version": "1.0.0",
-  "description": "museum site",
-  "homepage": "https://github.com/rolling-scopes-school/artem-webdeveloper-JSFEPRESCHOOL2025Q2#readme",
+  "description": "museum landing",
+  "homepage": "https://github.com/artem-webdeveloper/louvre-museum",
   "bugs": {
-    "url": "https://github.com/rolling-scopes-school/artem-webdeveloper-JSFEPRESCHOOL2025Q2/issues"
+    "url": "https://github.com/artem-webdeveloper/louvre-museum/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rolling-scopes-school/artem-webdeveloper-JSFEPRESCHOOL2025Q2.git"
+    "url": "git+https://github.com/artem-webdeveloper/louvre-museum.git"
   },
-  "license": "ISC",
+  "license": "MIT",
   "author": "artem-webdeveloper",
   "type": "commonjs",
   "main": "index.js",
